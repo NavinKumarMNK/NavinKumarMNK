@@ -1,3 +1,8 @@
+
+<a href="https://github.com/remarkablemark/html-react-parser/graphs/contributors">
+  <img src="https://opencollective.com/html-react-parser/contributors.svg?width=890&button=false">
+</a>
+
 - 👋 Hi, I’m @NavinKumarMNK aka IamAlwaysMega
 - 👀 I’m interested in Creation & Innovation 
 - 🌱 I’m currently learning, EVERYTHING I love
