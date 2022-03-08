@@ -2,8 +2,7 @@
 - 👀 I’m interested in Creation & Innovation 
 - 🌱 I’m currently learning, EVERYTHING I love
 - 💞️ I’m looking to collaborate on any AI, ML, DL, WebApp & Innovative Projects
-- 📫 Reach me through :
--             MAIL -ID : mnk.navin@outlook.com
+- 📫 Reach me through : MAIL -ID : mnk.navin@outlook.com
 
 <!---
 NavinKumarMNK/NavinKumarMNK is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
