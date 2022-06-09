@@ -18,7 +18,7 @@ You can click the Preview link to take a look at your changes.
  <div align="center">
 - 👋 Hi, I’m @NavinKumarMNK aka IamAlwaysMega <br>
 - 👀 I’m interested in Creation & Innovation <br>
-- 🌱 I’m currently learning, EVERYTHING I love <br>
-- 💞️ I’m looking to collaborate on any AI, ML, DL, WebApp & Innovative Projects <br>
+- 💞️ I’m currently learning, EVERYTHING I love <br>
+- 🌱 I’m looking to collaborate on any AI, ML, DL, WebApp & Innovative Projects <br>
 - 📫 Reach me through : MAIL -ID : mnk.navin@outlook.com <br>
 </div>
