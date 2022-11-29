@@ -4,3 +4,5 @@ VOCdevkit
 dataset
 models
 data
+node_modules
+.vscode

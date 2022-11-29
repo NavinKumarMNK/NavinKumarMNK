@@ -4,9 +4,11 @@ import torch.nn.functional as F
 import numpy as np
 import cv2
 from pprint import PrettyPrinter
+from dataset import Dataset
+from utils import Utils 
 
-class Utilities():
-    pass
+utils = Utils()
+dataset = Dataset()
 
 class OperationLayer(nn.Module):
     def __init__(self, operation:str):
