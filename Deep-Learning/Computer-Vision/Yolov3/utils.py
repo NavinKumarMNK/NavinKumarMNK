@@ -30,7 +30,7 @@ class Utils():
     def mAP(self, pred_boxex, true_boxes, 
             iou_threshold:int=0.5, box_formats:str="corners") -> float:
         #boxes = [[train indx, class_pred, prob_score, x1, y1, x2, y2], ...]
-        
+
 
     def transform():
         pass
