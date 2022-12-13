@@ -1,0 +1,23 @@
+artifact_path: RFC_model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.10.6
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.1.3
+mlflow_version: 2.0.1
+model_uuid: 1f97363b54a34e5597dfd84860602090
+run_id: cbbf98531b2f418e9256f77d1e0a1660
+signature:
+  inputs: '[{"name": "Length (mm)", "type": "float"}, {"name": "Depth (mm)", "type":
+    "float"}]'
+  outputs: '[{"name": "Species", "type": "string"}]'
+utc_time_created: '2022-12-13 16:49:07.423439'
