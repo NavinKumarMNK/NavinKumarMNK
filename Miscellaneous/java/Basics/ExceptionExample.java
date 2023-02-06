@@ -53,7 +53,7 @@ class CustomException extends Exception {
 }
 
 class ThrowsException {
-    public void call(int a) {
+    public void call(int a) throws CustomException {
         try {
             if (a < 0) {
                 throw new CustomException("Hello");
@@ -63,9 +63,46 @@ class ThrowsException {
         }
     }
 
-    public static void main(String args[]) throws CustomException {
+    public static void main(String args[]) {
         ThrowsException a = new ThrowsException();
-        a.call(-1);
+        try {
+            a.call(-1);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
         System.out.println("Hello");
     }
+}
+
+// Area of circle
+class NegativeRadiusException extends Exception {
+    public NegativeRadiusException(String s) {
+        super(s);
+    }
+}
+
+class AOC {
+    public double calc(float radius) throws NegativeRadiusException {
+        double area;
+        System.out.println(radius);
+        if (radius < 0) {
+            throw new NegativeRadiusException("Radius should be positive");
+        } else {
+            area = ((0.5) * radius * radius * 3.14);
+        }
+        return area;
+    }
+
+    public static void main(String[] args) {
+        float radius = 5;
+        AOC area = new AOC();
+        try {
+            double a = area.calc(radius);
+            System.out.println(a);
+        } catch (NegativeRadiusException e) {
+            System.out.println(e);
+        }
+
+    }
+
 }
