@@ -1,0 +1,13 @@
+UrbanSound8K
+.ipynb_checkpoints
+VOCdevkit
+dataset
+/Deep-Learning/**/models
+/Deep-Learning/**/data
+node_modules
+.vscode
+MLOps/data
+MLOps/wandb
+Miscellaneous/node.js/Dynamic-routes
+mvc
+lightning_logs
