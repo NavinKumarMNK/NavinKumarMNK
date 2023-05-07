@@ -5,7 +5,7 @@ import { readdir } from 'fs/promises'
 /**
  * It reads the contents of a directory and returns an array of strings that are the names of the files
  * in that directory
- * @param {string} path - required path to reads, example: `/blog` this will reads all `.mdx` files inside `src/data/blog`
+ * @param {string} path - required path to reads, example: `/post` this will reads all `.mdx` files inside `src/data/post`
  * @returns An array of strings.
  */
 export const readDirectory = async (path: string): Promise<Array<string>> => {

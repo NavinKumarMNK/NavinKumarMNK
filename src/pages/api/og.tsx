@@ -20,11 +20,11 @@ export default async function handler(req: NextRequest) {
           style={{
             opacity: 1,
             backgroundSize: 'cover',
-            backgroundImage: "url('https://ik.imagekit.io/mlnzyx/attachment/cover-og')"
+            backgroundImage: "url('https://ik.imagekit.io/mnk/8d71dbdacb15d3e324c03b9fbf93f74b.jpg?updatedAt=1683459732474')"
           }}
         >
           <div tw='flex flex-col h-full w-1/2 justify-between'>
-            <p tw='font-bold text-3xl text-blue-500'>https://megnav.me/blog</p>
+            <p tw='font-bold text-3xl text-blue-500'>https://megnav.me/post</p>
             <p tw='font-extrabold text-6xl'>{title}</p>
             <div tw='flex items-center'>
               <img
@@ -34,7 +34,7 @@ export default async function handler(req: NextRequest) {
                 style={{
                   objectFit: 'cover'
                 }}
-                src='https://ik.imagekit.io/mlnzyx/attachment/rizkimcitra.webp'
+                src='https://ik.imagekit.io/mnk/NavinKumarMNK.jpg?updatedAt=1683442016874'
                 alt='Navin Kumar M'
               />
               <p tw='ml-2.5 font-bold text-4xl'>Navin Kumar M</p>
@@ -42,7 +42,7 @@ export default async function handler(req: NextRequest) {
           </div>
 
           <div tw='flex items-center justify-center w-1/2 h-full'>
-            <img src='https://ik.imagekit.io/mlnzyx/attachment/logo.png' alt='logo' width={192} height={192} />
+            <img src='https://ik.imagekit.io/mnk/main.png?updatedAt=1683444843937' alt='logo' width={192} height={192} />
           </div>
         </div>
       ),

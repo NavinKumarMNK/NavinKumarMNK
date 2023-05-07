@@ -13,8 +13,8 @@ export const LINKS: typeof SOCIAL = [
     title: 'Website'
   },
   {
-    href: 'https://megnav.me/blog',
-    title: 'Blog'
+    href: 'https://megnav.me/post',
+    title: 'Post'
   }
 ]
 
@@ -92,7 +92,7 @@ export const SUMMARY = [
 
 export const LANGUAGES = [
   {
-    title: 'Indonesia',
+    title: 'Tamil',
     level: 'Native, Fluent'
   },
   {

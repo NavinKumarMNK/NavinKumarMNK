@@ -40,6 +40,7 @@
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.0",
     "react-icons": "^4.7.1",
+    "react-markdown": "^8.0.7",
     "slugify": "^1.6.5",
     "tailwind-merge": "^1.10.0"
   },

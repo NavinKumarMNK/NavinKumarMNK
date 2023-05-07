@@ -7,7 +7,7 @@ type LabelProps = {
   onClick?: () => void | (() => Promise<void>)
 }
 
-export const LabelBlog: React.FunctionComponent<LabelProps> = (props) => {
+export const LabelPost: React.FunctionComponent<LabelProps> = (props) => {
   const baseClass = 'inline-flex items-center justify-center py-1 px-1.5 rounded text-xs md:text-sm font-medium'
   const type = toLowerCase(props.type)
 

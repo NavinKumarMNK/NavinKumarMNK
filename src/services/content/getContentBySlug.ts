@@ -7,7 +7,7 @@ import { join } from 'path'
 type GetContentBySlug<T> = { content: string; header: { slug: string } & T }
 
 export const getContentBySlug = async <T>(
-  /** the path to the directory folder, example: `/blog`
+  /** the path to the directory folder, example: `/post`
    * **NOTE!** that the slash on the string is required!
    */
   path: string,

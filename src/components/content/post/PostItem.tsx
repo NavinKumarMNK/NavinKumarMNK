@@ -2,13 +2,13 @@ import { UnstyledLink } from '@/UI/links'
 
 import { numberToCompact } from '@/libs/intl'
 
-import { LabelBlog } from './LabelBlog'
+import { LabelPost } from './LabelPost'
 
 import { HiOutlineClock, HiOutlineEye } from 'react-icons/hi'
-import type { Blog } from 'megnav'
+import type { Post } from 'megnav'
 
-export const BlogItem: React.FunctionComponent<Blog> = (props) => {
-  const urlPost = `/blog/${props.slug}`
+export const PostItem: React.FunctionComponent<Post> = (props) => {
+  const urlPost = `/post/${props.slug}`
 
   return (
     <div className='w-full mb-5 md:mb-7 last:mb-0'>
@@ -25,7 +25,7 @@ export const BlogItem: React.FunctionComponent<Blog> = (props) => {
         {props.topics.length > 0 && (
           <div className='flex items-center space-x-2.5'>
             {props.topics.map((topic) => (
-              <LabelBlog key={topic} type={topic} />
+              <LabelPost key={topic} type={topic} />
             ))}
           </div>
         )}

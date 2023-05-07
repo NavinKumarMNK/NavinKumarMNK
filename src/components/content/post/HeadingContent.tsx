@@ -1,7 +1,7 @@
 import { twclsx } from '@/libs'
 import { dateFormat, dateStringToISO } from '@/libs/intl'
 
-import { LabelBlog } from './LabelBlog'
+import { LabelPost } from './LabelPost'
 
 import { HiOutlineCalendar, HiOutlineClock, HiOutlineEye } from 'react-icons/hi'
 
@@ -28,7 +28,7 @@ export const HeadingContent: React.FunctionComponent<HeadingContentProps> = (pro
 
       <div className='flex items-center space-x-2.5 mt-8 mb-4'>
         {props.topics.map((topic) => (
-          <LabelBlog key={props.title + topic} type={topic} />
+          <LabelPost key={props.title + topic} type={topic} />
         ))}
       </div>
 

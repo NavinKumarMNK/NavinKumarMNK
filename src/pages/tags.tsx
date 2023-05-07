@@ -1,4 +1,4 @@
-import { BlogList, LabelBlog } from '@/components/content'
+import { PostList, LabelPost } from '@/components/content'
 
 import { UnstyledButton } from '@/UI/buttons'
 import { CustomImage } from '@/UI/images'
@@ -9,50 +9,50 @@ import { getContents } from '@/services'
 
 import { twclsx } from '@/libs'
 import { generateOgImage, getMetaPage } from '@/libs/metapage'
-import { getNewestBlog } from '@/libs/sorters'
+import { getNewestPost } from '@/libs/sorters'
 
 import { useTags } from '@/hooks'
 
 import type { GetStaticProps, NextPage } from 'next'
 import readingTime from 'reading-time'
-import type { Blog } from 'megnav'
+import type { Post } from 'megnav'
 
 type TagsProps = {
   tags: string[]
-  blogs: Blog[]
+  posts: Post[]
 }
 
 const meta = getMetaPage({
   title: 'Tags',
-  description: 'Look for a specific blog post based on tag.',
+  description: 'Look for a specific post post based on tag.',
   keywords: ['Tags', 'tag', 'tags', 'megnav.me'],
-  og_image: generateOgImage({ title: 'Tags', subTitle: 'Look for a specific blog post based on tag.', theme: 'dark' }),
+  og_image: generateOgImage({ title: 'Tags', subTitle: 'Look for a specific post post based on tag.', theme: 'dark' }),
   og_image_alt: 'Certificate — megnav.me',
   slug: '/tags',
   type: 'website'
 })
 
 export const getStaticProps: GetStaticProps<TagsProps> = async () => {
-  const res = await getContents<Blog>('/blog')
+  const res = await getContents<Post>('/post')
 
-  const blogs = res.map((b) => ({ ...b.header, est_read: readingTime(b.content).text })).sort(getNewestBlog)
+  const posts = res.map((b) => ({ ...b.header, est_read: readingTime(b.content).text })).sort(getNewestPost)
 
   const tags = res
-    .map((blog) => blog.header.topics)
+    .map((post) => post.header.topics)
     .flat()
     .filter((tag, index, tags) => tags.indexOf(tag) === index)
 
   return {
     props: {
       tags,
-      blogs
+      posts
     }
   }
 }
 
-const TagsPage: NextPage<TagsProps> = ({ tags, blogs }) => {
+const TagsPage: NextPage<TagsProps> = ({ tags, posts }) => {
   const { selectedTags, setNewTag } = useTags()
-  const filteredBlogs = blogs.filter((b) => selectedTags.map((t) => b.topics.includes(t)).includes(true))
+  const filteredPosts = posts.filter((b) => selectedTags.map((t) => b.topics.includes(t)).includes(true))
 
   return (
     <LayoutPage seo={meta}>
@@ -61,7 +61,7 @@ const TagsPage: NextPage<TagsProps> = ({ tags, blogs }) => {
       <section className={twclsx('flex items-stretch', 'flex-wrap flex-auto gap-2 md:gap-4', 'py-10')}>
         {tags.map((t) => (
           <UnstyledButton onClick={setNewTag(t)} key={t}>
-            <LabelBlog
+            <LabelPost
               type={t}
               className={twclsx(
                 'py-2 px-4 rounded',
@@ -76,9 +76,9 @@ const TagsPage: NextPage<TagsProps> = ({ tags, blogs }) => {
       </section>
 
       {selectedTags.length > 0 ? (
-        <BlogList
+        <PostList
           description="Based on the selected tags, I've found some possible results for your."
-          posts={filteredBlogs}
+          posts={filteredPosts}
           title='Showing Selected Tags'
         />
       ) : (

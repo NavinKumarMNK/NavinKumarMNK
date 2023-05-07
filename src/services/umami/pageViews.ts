@@ -23,8 +23,8 @@ const reducePageViewsToNumber = (arr: Array<PageView>) => {
 
 /**
  * It takes a slug, gets a token, then makes two requests to the Umami API, one for the article and one
- * for the blog, and then merges the data and returns it
- * @param {string} slug - string - the slug of the article or blog post
+ * for the post, and then merges the data and returns it
+ * @param {string} slug - string - the slug of the article or post post
  * @returns An object with two properties: isError and data.
  */
 export const getPageViews = async (slug: string, token: string): Promise<GetPageViews> => {
@@ -33,7 +33,7 @@ export const getPageViews = async (slug: string, token: string): Promise<GetPage
   const config = { headers: { Authorization: `Bearer ${token}` } }
 
   const articleURL = `/api/website/1/stats?start_at=${1645722000000}&end_at=${end_date.getTime()}&url=/article/${slug}`
-  const blogURL = `/api/website/1/stats?start_at=${1645722000000}&end_at=${end_date.getTime()}&url=/blog/${slug}`
+  const postURL = `/api/website/1/stats?start_at=${1645722000000}&end_at=${end_date.getTime()}&url=/post/${slug}`
 
   let responseArticle = {
     bounces: { change: 0, value: 0 },
@@ -42,16 +42,16 @@ export const getPageViews = async (slug: string, token: string): Promise<GetPage
     unique: { change: 0, value: 0 }
   } as PageView
 
-  let responseBlog = {
+  let responsePost = {
     bounces: { change: 0, value: 0 },
     pageviews: { change: 0, value: 0 },
     totaltime: { change: 0, value: 0 },
     unique: { change: 0, value: 0 }
   } as PageView
 
-  /* Making two requests to the Umami API, one for the article and one for the blog, and then merges the
+  /* Making two requests to the Umami API, one for the article and one for the post, and then merges the
  data and returns it */
-  const res = await Promise.allSettled([UMAMI.get<PageView>(articleURL, config), UMAMI.get<PageView>(blogURL, config)])
+  const res = await Promise.allSettled([UMAMI.get<PageView>(articleURL, config), UMAMI.get<PageView>(postURL, config)])
 
   /* Checking if the first request was successful, and if it was, it is assigning the data to the
   responseArticle variable. */
@@ -60,14 +60,14 @@ export const getPageViews = async (slug: string, token: string): Promise<GetPage
   }
 
   /* Checking if the second request was successful, and if it was, it is assigning the data to the
-    responseBlog variable. */
+    responsePost variable. */
   if (res[1].status === 'fulfilled') {
-    responseBlog = res[1].value.data
+    responsePost = res[1].value.data
   }
 
-  /* Taking the two objects, responseArticle and responseBlog, and putting them into an array, and then
+  /* Taking the two objects, responseArticle and responsePost, and putting them into an array, and then
   using the Object.values() method to return an array of the values of the objects. */
-  const mergedResponseData = Object.values([responseArticle, responseBlog])
+  const mergedResponseData = Object.values([responseArticle, responsePost])
 
   const data = reducePageViewsToNumber(mergedResponseData)
 

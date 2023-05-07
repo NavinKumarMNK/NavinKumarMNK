@@ -1,23 +1,23 @@
 import { CustomSeo } from '@/components'
-import { BlogList, ContentImage, PortfolioList } from '@/components/content'
+import { PostList, ContentImage, PortfolioList, SkillsList } from '@/components/content'
 
 import { Footer, SocialHome } from '@/UI/common'
 
 import { GetContents, getContents } from '@/services'
 
 import { getMetaPage } from '@/libs/metapage'
-import { getNewestBlog, getNewestPortfolio } from '@/libs/sorters'
+import { getNewestPost, getNewestPortfolio } from '@/libs/sorters'
 
 import type { GetStaticProps, NextPage } from 'next'
 import readingTime from 'reading-time'
-import type { Blog, Portfolio } from 'megnav'
+import type { Post, Portfolio } from 'megnav'
 
 interface HomePageProps {
-  blogs: Array<Blog>
+  posts: Array<Post>
   portfolios: Array<Portfolio>
 }
 
-const HomePage: NextPage<HomePageProps> = ({ blogs, portfolios }) => {
+const HomePage: NextPage<HomePageProps> = ({ posts, portfolios }) => {
   const meta = getMetaPage({
     title: 'NavinKumarMNK',
     template: 'Data Scientist, ML Engineer, Student',
@@ -32,9 +32,9 @@ const HomePage: NextPage<HomePageProps> = ({ blogs, portfolios }) => {
     <>
       <CustomSeo {...meta} />
 
-      <div className='w-full h-40 md:layout pattern' />
+      <div className='w-full h-40 md:layout pattern ' />
 
-      <main className='layout max-w-[1600px]'>
+      <main className='layout'>
         <section className='flex flex-col'>
           <div className='relative flex h-14 md:h-16'>
             <ContentImage
@@ -58,45 +58,29 @@ const HomePage: NextPage<HomePageProps> = ({ blogs, portfolios }) => {
 
             <div className='[&>p:not(:last-child)]:mb-3'>
               <p>
-                Hello👋, I&apos;m <strong>Navin Kumar M</strong>, a guy who loves to solve complex real-world problems through Artificial Intelligence. Welcome to my personal
-                website, where you can find my projects, works and portfolio.
+              Hello👋, This is <strong>Navin Kumar M</strong>, and I'm passionate about using <strong>Artificial Intelligence</strong> to solve <strong>Complex 
+                Real-World Problems </strong>. By leveraging the latest advancements in <strong>Deep Learning, </strong>  I strive to create innovative solutions that have a positive impact on society.
+                I invite you to have a glimpse of my journey as an <strong>AI Enthusiast </strong> and my expertise in various domains. 
+              </p><p>
+              I have worked in fields like <strong>Computer Vision, Natural Language Processing,
+               Generative Models, Modelling Tabular & Time Series Data </strong>. I have worked on diverse projects that have helped me hone my skills and gain a deeper understanding of the field.
+              
+              </p>
+              <p>
+                I am passionate about <strong>PreTraining Models on Large Data, Solving Complex Machine Learning Problems</strong> and enjoy deploying <strong>Production level Scalable Systems.</strong> I love
+                combining my technical knowledge and creativity to create and deploy entire <strong>MLOps Pipeline</strong> with full fledge working Application.
               </p>
 
-              <p>
-                As a <strong>self-taught back-end developer & Machine Learning Engineer</strong>, I started creating Backend Web-Apps, Machine Learning models after my 12th grade
-                and have been gradually improving my skills over time.
-              </p>
-
-              <p>
-                I am passionate about <strong>Frontend Development</strong> and enjoy working on the Web. I love
-                combining my technical knowledge and creativity to build engaging and user-friendly websites and
-                applications.
-              </p>
-
-              <p>
-                I&apos;m very interested with <strong>Frontend Architecture</strong>,{' '}
-                <strong>Frontend Accessibility</strong>, and <strong>User Experience</strong>, and also interested in
-                mobile development with Kotlin .
-              </p>
-
-              <p>
-                <strong>As a person</strong>, <strong>I am constantly striving to improve myself</strong> and{' '}
-                <strong>become a better person</strong>. I believe that <em>growth and personal development</em> are
-                important aspects of a <strong>fulfilling life</strong>.
-              </p>
-
-              <p>
-                On this website, I like to share my <strong>various thoughts</strong> about web development related
-                topics, general daily life and a place for <strong>showcasing my portfolio</strong>.
-              </p>
             </div>
           </div>
         </section>
 
-        <BlogList
+        <SkillsList />
+
+        <PostList
           className='pt-32'
-          description="If you're looking for some interesting reads, check out my featured blog post. sorted from latest to least, feel free to explore it."
-          posts={blogs}
+          description="If you're looking for some interesting reads, check out my featured post post. sorted from latest to least, feel free to explore it."
+          posts={posts}
           title='Featured Post'
         />
 
@@ -113,18 +97,18 @@ const HomePage: NextPage<HomePageProps> = ({ blogs, portfolios }) => {
 }
 
 export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
-  const [requestBlogs, requestPortfolios] = await Promise.allSettled([
-    getContents<Blog>('/blog'),
+  const [requestPosts, requestPortfolios] = await Promise.allSettled([
+    getContents<Post>('/post'),
     getContents<Portfolio>('/portfolio')
   ])
 
-  const blogsData = [] as Array<GetContents<Blog>>
+  const postsData = [] as Array<GetContents<Post>>
   const portfoliosData = [] as Array<GetContents<Portfolio>>
   // const portfoliosData = [] as Array<Portfolio>
 
-  if (requestBlogs.status === 'fulfilled') {
-    requestBlogs.value.forEach((blog) => {
-      blogsData.push(blog)
+  if (requestPosts.status === 'fulfilled') {
+    requestPosts.value.forEach((post) => {
+      postsData.push(post)
     })
   }
   if (requestPortfolios.status === 'fulfilled') {
@@ -133,10 +117,10 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
     })
   }
 
-  const blogs = blogsData
+  const posts = postsData
     .filter((r) => r.header.featured)
     .map((r) => ({ est_read: readingTime(r.content).text, ...r.header }))
-    .sort(getNewestBlog)
+    .sort(getNewestPost)
 
   const portfolios = portfoliosData
     .map((p) => p.header)
@@ -145,7 +129,7 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
 
   return {
     props: {
-      blogs,
+      posts,
       portfolios
     }
   }

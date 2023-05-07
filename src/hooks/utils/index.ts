@@ -1,4 +1,4 @@
 export * from './useTags'
-export * from './useSearchBlog'
+export * from './useSearchPost'
 export * from './useSearchSnippet'
 export * from './useSearchPortfolio'

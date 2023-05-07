@@ -11,5 +11,5 @@ export type MetaPage = {
   slug: string
   og_image: string
   og_image_alt: string
-  type?: 'website' | 'blog'
+  type?: 'website' | 'post'
 } & CustomSeoProps

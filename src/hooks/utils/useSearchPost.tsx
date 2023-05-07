@@ -1,11 +1,11 @@
 import { toLowerCase } from '@/libs/string'
 
 import { useCallback, useEffect, useRef, useState } from 'react'
-import type { Blog } from 'megnav'
+import type { Post } from 'megnav'
 
-export const useSearchBlog = (blogs: Blog[]) => {
+export const useSearchPost = (posts: Post[]) => {
   const [query, setQ] = useState('')
-  const [filteredBlog, sFB] = useState<Blog[]>([])
+  const [filteredPost, sFB] = useState<Post[]>([])
   const mounted = useRef(true)
 
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => setQ(e.target.value), [])
@@ -17,13 +17,13 @@ export const useSearchBlog = (blogs: Blog[]) => {
     }
 
     ;(() => {
-      if (blogs.length === 0) return
+      if (posts.length === 0) return
 
-      const filtered = blogs.filter((blog) => {
+      const filtered = posts.filter((post) => {
         return (
-          toLowerCase(blog.title).includes(toLowerCase(query)) ||
-          toLowerCase(blog.summary).includes(toLowerCase(query)) ||
-          blog.topics.map((t) => t.includes(query)).includes(true)
+          toLowerCase(post.title).includes(toLowerCase(query)) ||
+          toLowerCase(post.summary).includes(toLowerCase(query)) ||
+          post.topics.map((t) => t.includes(query)).includes(true)
         )
       })
 
@@ -35,6 +35,6 @@ export const useSearchBlog = (blogs: Blog[]) => {
   return {
     query,
     handleChange,
-    filteredBlog
+    filteredPost
   }
 }

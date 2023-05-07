@@ -1,6 +1,6 @@
 ---
 title: 'Read Your Mdx Files'
-summary: 'Most dev use MDX as their storage to store content such as blog, well this site use mdx too, this snippet useful to read mdx files'
+summary: 'Most dev use MDX as their storage to store content such as post, well this site use mdx too, this snippet useful to read mdx files'
 topic: 'nodejs'
 author: 'NavinKumarMNK'
 github_username: 'rizkimcitra'
@@ -12,13 +12,13 @@ created_at: '10/14/2022'
 To read Mdx file, first locate where the mdx files are stored by targeting its folder
 
 ```js
-// in my case: src/data/blog
+// in my case: src/data/post
 import * as fs from 'fs/promises'
 import matter from 'gray-matter'
 import * as path from 'path'
 
 // notice I only target it's parent folder (data) in case there is another
-// mdx content that I want to store aside from blog post
+// mdx content that I want to store aside from post post
 const folder = path.join(process.cwd(), 'src/data')
 
 export const getContentBySlug = async (path, slug) => {
@@ -67,9 +67,9 @@ To read your mdx file, simply call it with giving it two argument:
 2. the file name itself
 
 ```js
-// notice I don't need to prefix the first parameter to be `/blog`
+// notice I don't need to prefix the first parameter to be `/post`
 // or the second paramter to be `my-first-post.mdx`
-const post = await getContentBySlug('blog', 'my-first-post')
+const post = await getContentBySlug('post', 'my-first-post')
 ```
 
 ### Usage in TypeScript
@@ -83,7 +83,7 @@ type Post = {
   author: string
 }
 
-const post = await getContentBySlug<Post>('blog', 'my-first-post')
+const post = await getContentBySlug<Post>('post', 'my-first-post')
 
 /**
  * post will be:

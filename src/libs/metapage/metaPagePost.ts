@@ -5,14 +5,14 @@ import { dateStringToISO } from '@/libs/intl'
 import { generateOgImage } from './ogImage'
 import { SITE_NAME, SITE_URL, TWITER_USERNAME } from './type'
 
-import type { Blog } from 'megnav'
+import type { Post } from 'megnav'
 
-export const getMetaPageBlog = (data: Blog): CustomSeoProps => ({
+export const getMetaPagePost = (data: Post): CustomSeoProps => ({
   title: data.title,
   description: data.summary,
   canonical: SITE_URL + data.slug,
   openGraph: {
-    type: 'blog',
+    type: 'post',
     article: { authors: [data.author_name], publishedTime: dateStringToISO(data.published), tags: data.topics },
     images: [
       {

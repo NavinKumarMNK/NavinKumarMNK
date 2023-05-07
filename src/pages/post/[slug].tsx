@@ -1,6 +1,6 @@
 import { ToTopButton } from '@/components/UI/buttons'
 import { PRButton } from '@/components/content'
-import { AuthorSection, GiscusComment, HeadingContent } from '@/components/content/blog'
+import { AuthorSection, GiscusComment, HeadingContent } from '@/components/content/post'
 import { MDXComponents } from '@/components/content/mdx'
 
 import { LayoutPage } from '@/UI/templates'
@@ -9,7 +9,7 @@ import type { LayoutPageProps } from '@/UI/templates'
 import { getContentBySlug, getContents } from '@/services/content'
 
 import { isDev } from '@/libs/constants/environmentState'
-import { getMetaPageBlog } from '@/libs/metapage'
+import { getMetaPagePost } from '@/libs/metapage'
 import { twclsx } from '@/libs/twclsx'
 
 import axios from 'axios'
@@ -20,22 +20,22 @@ import { ParsedUrlQuery } from 'querystring'
 import { useEffect, useState } from 'react'
 import readingTime from 'reading-time'
 import rehypeSlug from 'rehype-slug'
-import type { Blog, PageViewResponse } from 'megnav'
+import type { Post, PageViewResponse } from 'megnav'
 
-interface BlogPostProps {
+interface PostPostProps {
   mdxSource: MDXRemoteSerializeResult
-  header: Blog
+  header: Post
 }
 
 interface slug extends ParsedUrlQuery {
   slug: string
 }
 
-const BlogPost: NextPage<BlogPostProps> = ({ header, mdxSource }) => {
+const PostPost: NextPage<PostPostProps> = ({ header, mdxSource }) => {
   const [postViews, setPostViews] = useState<number>(0)
-  const metaData = getMetaPageBlog({
+  const metaData = getMetaPagePost({
     ...header,
-    slug: '/blog/' + header.slug
+    slug: '/post/' + header.slug
   })
 
   useEffect(() => {
@@ -76,7 +76,7 @@ const BlogPost: NextPage<BlogPostProps> = ({ header, mdxSource }) => {
       <GiscusComment />
 
       <div className='flex flex-col space-y-2.5 md:space-y-0 md:flex-row md:items-center md:justify-between mt-8'>
-        <PRButton path={`/blog/${header.slug}.mdx`} />
+        <PRButton path={`/post/${header.slug}.mdx`} />
 
         <ToTopButton />
       </div>
@@ -85,7 +85,7 @@ const BlogPost: NextPage<BlogPostProps> = ({ header, mdxSource }) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const res = await getContents<Blog>('/blog')
+  const res = await getContents<Post>('/post')
 
   const paths = res.map((r) => ({ params: { slug: r.header.slug } })) as GetStaticPathsResult['paths']
 
@@ -95,13 +95,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 }
 
-export const getStaticProps: GetStaticProps<BlogPostProps> = async (ctx) => {
+export const getStaticProps: GetStaticProps<PostPostProps> = async (ctx) => {
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   const mdxPrism = require('mdx-prism')
 
   const { slug } = ctx.params as slug
 
-  const res = await getContentBySlug<Blog>('/blog', slug)
+  const res = await getContentBySlug<Post>('/post', slug)
   const est_read = readingTime(res.content).text
 
   const mdxSource = await serialize(res.content, {
@@ -116,4 +116,4 @@ export const getStaticProps: GetStaticProps<BlogPostProps> = async (ctx) => {
   }
 }
 
-export default BlogPost
+export default PostPost

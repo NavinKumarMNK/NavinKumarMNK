@@ -1,5 +1,5 @@
 export * from './GiscusComment'
-export * from './LabelBlog'
+export * from './LabelPost'
 export * from './AuthorSection'
 export * from './HeadingContent'
-export * from './BlogList'
+export * from './PostList'

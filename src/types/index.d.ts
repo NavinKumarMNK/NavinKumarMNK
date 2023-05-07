@@ -1,6 +1,6 @@
 declare module 'megnav' {
-  /** Type used for blog post or meta data for blog */
-  export type Blog = {
+  /** Type used for post post or meta data for post */
+  export type Post = {
     title: string
     slug: string
     summary: string

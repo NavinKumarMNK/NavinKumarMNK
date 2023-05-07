@@ -1,3 +1,3 @@
 export * from './metaPage'
-export * from './metaPageBlog'
+export * from './metaPagePost'
 export * from './ogImage'

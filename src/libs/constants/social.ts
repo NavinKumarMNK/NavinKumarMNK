@@ -1,19 +1,19 @@
 const SOCIAL = [
   {
     title: 'Email',
-    href: 'mailto: rmaulana.citra@gmail.com?subject='
+    href: 'mailto: mnk.navin@outlook.com?subject='
   },
   {
     title: 'LinkedIn',
-    href: 'https://linkedin.com/in/rizkimcitra'
+    href: 'https://www.linkedin.com/in/mnk-navin/'
   },
   {
     title: 'GitHub',
-    href: 'https://github.com/rizkimcitra'
+    href: 'https://github.com/NavinKumarMNK'
   },
   {
     title: 'Telegram',
-    href: 'https://t.me/rizkimcitra'
+    href: 'https://wa.link/pj11og'
   }
 ]
 

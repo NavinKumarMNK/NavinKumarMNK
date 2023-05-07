@@ -14,7 +14,7 @@ type RouteType = (typeof APP_ROUTE)[0] & { icon: IconType }
 const icon = {
   home: RiHome6Line,
   portfolio: RiReactjsLine,
-  blog: RiPenNibLine,
+  post: RiPenNibLine,
   guestbook: RiContactsBookLine
 } as Record<string, IconType>
 
