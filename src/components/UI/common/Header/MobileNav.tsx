@@ -7,7 +7,7 @@ import { Menu, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
 import { HiMenuAlt4 } from 'react-icons/hi'
 import type { IconType } from 'react-icons/lib'
-import { RiContactsBookLine, RiHome6Line, RiPenNibLine, RiReactjsLine } from 'react-icons/ri'
+import { RiContactsBookLine, RiHome6Line, RiPenNibLine, RiReactjsLine, RiFilePaper2Fill } from 'react-icons/ri'
 
 type RouteType = (typeof APP_ROUTE)[0] & { icon: IconType }
 
@@ -15,7 +15,9 @@ const icon = {
   home: RiHome6Line,
   portfolio: RiReactjsLine,
   post: RiPenNibLine,
-  guestbook: RiContactsBookLine
+  resume: RiContactsBookLine,
+  certificate: RiFilePaper2Fill
+
 } as Record<string, IconType>
 
 const route: RouteType[] = APP_ROUTE.map((r) => ({ ...r, icon: icon[r.name.toLowerCase()] }))
