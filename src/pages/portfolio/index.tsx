@@ -13,7 +13,7 @@ import { twclsx } from '@/libs/twclsx'
 import { useSearchPortfolio } from '@/hooks'
 
 import type { GetStaticProps, NextPage } from 'next'
-import type { Portfolio } from 'rizkicitra'
+import type { Portfolio } from 'megnav'
 
 type PortfoliopageProps = {
   portfolio: Array<Portfolio>
@@ -23,14 +23,14 @@ const meta = getMetaPage({
   title: 'Portfolio',
   description: `A selection of my personal works. I've included samples to showcase my skills and experience. Take a look around and let me know what you think. I'm always open to feedback and opportunities to collaborate.`,
   keywords: [
-    'Rizki Maulana Citra portfolio',
-    'Rizki M Citra portfolio',
-    'Rizkicitra porfolio',
-    'Rizki Citra portfolio',
-    'rizkicitra.dev'
+    'NavinKumarMNK portfolio',
+    'Navin Kumar M portfolio',
+    'megnav porfolio',
+    'Navin Kumar M portfolio',
+    'megnav.me'
   ],
-  og_image: generateOgImage({ title: 'Portfolio - rizkicitra.dev', subTitle: 'Take a look at my personal portfolio' }),
-  og_image_alt: 'Portfolio — rizkicitra.dev',
+  og_image: generateOgImage({ title: 'Portfolio - megnav.me', subTitle: 'Take a look at my personal portfolio' }),
+  og_image_alt: 'Portfolio — megnav.me',
   slug: '/portfolio',
   type: 'website'
 })
@@ -39,7 +39,7 @@ const ProjectPage: NextPage<PortfoliopageProps> = ({ portfolio }) => {
   const search = useSearchPortfolio(portfolio)
 
   return (
-    <LayoutPage seo={meta}>
+    <LayoutPage className='max-w-[1600px]' seo={meta}>
       <Hero title={meta.title as string} description={meta.description as string} />
       <Searchbar onChange={search.handleChange} value={search.query} />
 

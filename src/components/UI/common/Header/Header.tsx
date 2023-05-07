@@ -29,14 +29,17 @@ export const Header: React.FunctionComponent = () => {
         y > 34 && 'border-b-theme-300 dark:border-b-theme-600'
       )}
     >
-      <nav className='layout flex items-center justify-end md:justify-between h-16 md:h-14'>
+      <nav className='layout flex items-center justify-between h-14 md:h-14'>
+        <div className=''>
         <img
-            className="h-12 w-auto"
-            src="https://ik.imagekit.io/mnk/large_logo.png?updatedAt=1683375980875"
+            className="w-40"
+            src="https://ik.imagekit.io/mnk/main-removebg-preview.png?updatedAt=1683444993946"
+            
             alt="Logo"
           />
+        </div>
 
-        <div className='md:flex md:items-center hidden space-x-5'>
+        <div className='md:flex  md:items-center hidden space-x-5 justify-end'>
           
           {APP_ROUTE.map((route) => {
             return (
@@ -54,7 +57,7 @@ export const Header: React.FunctionComponent = () => {
           })}
         </div>
 
-        <div className='inline-flex items-center justify-end space-x-2.5 md:space-x-0'>
+        <div className='inline-flex items-center md:justify-end space-x-2.5 md:space-x-0'>
           <ThemeMenu />
           <MobileNav />
         </div>

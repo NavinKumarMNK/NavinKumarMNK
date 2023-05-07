@@ -10,7 +10,7 @@ import { getNewestBlog, getNewestPortfolio } from '@/libs/sorters'
 
 import type { GetStaticProps, NextPage } from 'next'
 import readingTime from 'reading-time'
-import type { Blog, Portfolio } from 'rizkicitra'
+import type { Blog, Portfolio } from 'megnav'
 
 interface HomePageProps {
   blogs: Array<Blog>
@@ -19,12 +19,12 @@ interface HomePageProps {
 
 const HomePage: NextPage<HomePageProps> = ({ blogs, portfolios }) => {
   const meta = getMetaPage({
-    title: 'Rizki Maulana Citra',
-    template: 'Student And Frontend Developer',
-    description: `Personal Website, Online Portfolio And Blog, Built On Top Of NEXT.js, An Online Space For Rizki To Share His Knowledge And Experience.`,
-    keywords: ['Rizki Maulana Citra', 'Rizki M Citra', 'Rizkicitra', 'Rizki Citra', 'rizkicitra.dev'],
-    og_image: `https://ik.imagekit.io/mnk/NavinKumarMNK.jpg?updatedAt=1683374529444`,
-    og_image_alt: 'Rizki Maulana Citra',
+    title: 'NavinKumarMNK',
+    template: 'Data Scientist, ML Engineer, Student',
+    description: `Personal Website & Portfolio, Built On Top Of NEXT.js, An Online Space For NavinK To Share His Knowledge And Experience.`,
+    keywords: ['NavinKumarMNK', 'Navin Kumar M', 'megnav.me'],
+    og_image: `https://ik.imagekit.io/mnk/NavinKumarMNK.jpg?updatedAt=1683442016874`,
+    og_image_alt: 'NavinKumarMNK',
     slug: '/',
     type: 'website'
   })
@@ -34,11 +34,11 @@ const HomePage: NextPage<HomePageProps> = ({ blogs, portfolios }) => {
 
       <div className='w-full h-40 md:layout pattern' />
 
-      <main className='layout'>
+      <main className='layout max-w-[1600px]'>
         <section className='flex flex-col'>
           <div className='relative flex h-14 md:h-16'>
             <ContentImage
-              src='https://ik.imagekit.io/mnk/NavinKumarMNK.jpg?updatedAt=1683374529444'
+              src='https://ik.imagekit.io/mnk/NavinKumarMNK.jpg?updatedAt=1683442016874'
               alt='Navin Kumar M'
               width={146}
               height={146}
@@ -53,17 +53,17 @@ const HomePage: NextPage<HomePageProps> = ({ blogs, portfolios }) => {
           <div className='mt-3 md:mt-6'>
             <h1>Navin Kumar M</h1>
             <h2 className='max-w-max mb-7 text-transparent font-bold text-xl md:text-2xl bg-clip-text bg-gradient-to-r from-primary-500 to-ternary-500 dark:text-transparent'>
-              Student &amp; ML Engineer, Data Scientist
+              UnderGrad &amp; ML Engineer, Data Scientist
             </h2>
 
-            <div className='[&>p:not(:last-child)]:mb-3 [&>p]:max-w-prose md:pb-6'>
+            <div className='[&>p:not(:last-child)]:mb-3'>
               <p>
-                Hello👋, I&apos;m Rizki Maulana Citra, a guy who loves to code, music and coffee. Welcome to my personal
-                website, where you can find my portfolio, blog and more.
+                Hello👋, I&apos;m <strong>Navin Kumar M</strong>, a guy who loves to solve complex real-world problems through Artificial Intelligence. Welcome to my personal
+                website, where you can find my projects, works and portfolio.
               </p>
 
               <p>
-                As a <strong>self-taught developer</strong>, I started learning web development when I was in 12th grade
+                As a <strong>self-taught back-end developer & Machine Learning Engineer</strong>, I started creating Backend Web-Apps, Machine Learning models after my 12th grade
                 and have been gradually improving my skills over time.
               </p>
 

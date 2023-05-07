@@ -17,7 +17,7 @@ import { serialize } from 'next-mdx-remote/serialize'
 import type { ParsedUrlQuery } from 'querystring'
 import { HiOutlineCalendar } from 'react-icons/hi'
 import rehypeSlug from 'rehype-slug'
-import type { Portfolio } from 'rizkicitra'
+import type { Portfolio } from 'megnav'
 
 type ProjectDetailPageProps = {
   header: Portfolio

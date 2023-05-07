@@ -18,9 +18,9 @@ const meta = getMetaPage({
   title: 'Resume',
   description:
     "Personal resume that I build on the web, as a Frontend Dev, I use my creativity to build my personal resume on the web instead on a regular 'paper'.",
-  keywords: ['rizki maulana citra', 'resume', 'curriculum vitae', 'rizki citra cv', 'rizki m citra resume'],
-  og_image: generateOgImage({ title: 'Resume - rizkicitra.dev', subTitle: 'Take a look at my resume' }),
-  og_image_alt: 'Resume — rizkicitra.dev',
+  keywords: ['NavinKumarMNK', 'resume', 'curriculum vitae', 'Navin Kumar M cv', 'Navin Kumar M resume'],
+  og_image: generateOgImage({ title: 'Resume - megnav.me', subTitle: 'Take a look at my resume' }),
+  og_image_alt: 'Resume — megnav.me',
   slug: '/resume',
   type: 'website'
 })

@@ -1,4 +1,4 @@
-declare module 'rizkicitra' {
+declare module 'megnav' {
   /** Type used for blog post or meta data for blog */
   export type Blog = {
     title: string

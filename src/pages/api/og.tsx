@@ -24,7 +24,7 @@ export default async function handler(req: NextRequest) {
           }}
         >
           <div tw='flex flex-col h-full w-1/2 justify-between'>
-            <p tw='font-bold text-3xl text-blue-500'>https://rizkicitra.dev/blog</p>
+            <p tw='font-bold text-3xl text-blue-500'>https://megnav.me/blog</p>
             <p tw='font-extrabold text-6xl'>{title}</p>
             <div tw='flex items-center'>
               <img
@@ -35,9 +35,9 @@ export default async function handler(req: NextRequest) {
                   objectFit: 'cover'
                 }}
                 src='https://ik.imagekit.io/mlnzyx/attachment/rizkimcitra.webp'
-                alt='Rizki M Citra'
+                alt='Navin Kumar M'
               />
-              <p tw='ml-2.5 font-bold text-4xl'>Rizki M Citra</p>
+              <p tw='ml-2.5 font-bold text-4xl'>Navin Kumar M</p>
             </div>
           </div>
 

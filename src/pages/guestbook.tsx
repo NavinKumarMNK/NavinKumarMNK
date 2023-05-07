@@ -20,23 +20,23 @@ const meta = getMetaPage({
   description: `Sign a guestbook on my website, you can leave whatever you'd like.`,
   keywords: [
     'Guestbook',
-    'rizkicitra',
+    'megnav',
     'rizkimcitra',
-    'Rizki Citra',
+    'Navin Kumar M',
     'R Maulana Citra',
     'Guestbook Rizki',
     'Guestbook message',
-    'Rizki Maulana Citra',
-    'Rizki Maulana Citra',
-    'Guestbook Rizki M Citra',
-    'Guestbook Rizki Maulana Citra'
+    'NavinKumarMNK',
+    'NavinKumarMNK',
+    'Guestbook Navin Kumar M',
+    'Guestbook NavinKumarMNK'
   ],
   og_image: generateOgImage({
     title: 'Guestbook',
     subTitle: "Leave whatever message you'd like on my website",
     theme: 'dark'
   }),
-  og_image_alt: 'Guestbook - rizkicitra.dev',
+  og_image_alt: 'Guestbook - megnav.me',
   slug: '/guestbook',
   type: 'website'
 })

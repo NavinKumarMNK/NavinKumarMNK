@@ -4,11 +4,11 @@
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
-  "author": "Rizki Maulana Citra",
-  "name": "rizkicitra.dev",
-  "app_name": "rizkicitra.dev",
-  "short_name": "Rizki Citra",
-  "description": "Personal Website, Online Portfolio And Blog, Built On Top Of NEXT.js, An Online Space For Rizki To Share His Knowledge And Experience.",
+  "author": "NavinKumarMNK",
+  "name": "megnav.me",
+  "app_name": "megnav.me",
+  "short_name": "Navin Kumar M",
+  "description": "Personal Website, Online Portfolio, Built On Top Of NEXT.js, An Online Space For Navin Kumar M To Share His Knowledge And Experience.",
   "icons": [
     {
       "src": "/icon-192x192.png",

@@ -1,7 +1,7 @@
 import { SnippetItem } from './SnippetItem'
 
 import { useId } from 'react'
-import { Snippet } from 'rizkicitra'
+import { Snippet } from 'megnav'
 
 type Props = {
   snippets: Snippet[]

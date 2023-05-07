@@ -20,7 +20,7 @@ import { ParsedUrlQuery } from 'querystring'
 import { useEffect, useState } from 'react'
 import readingTime from 'reading-time'
 import rehypeSlug from 'rehype-slug'
-import type { Blog, PageViewResponse } from 'rizkicitra'
+import type { Blog, PageViewResponse } from 'megnav'
 
 interface BlogPostProps {
   mdxSource: MDXRemoteSerializeResult
@@ -42,7 +42,7 @@ const BlogPost: NextPage<BlogPostProps> = ({ header, mdxSource }) => {
     // run only on client side
     if (typeof window === 'undefined') return
     ;(async () => {
-      const baseURL = isDev ? 'http://localhost:3000' : process.env.NEXT_PUBLIC_SITE_URL ?? 'https://rizkicitra.dev'
+      const baseURL = isDev ? 'http://localhost:3000' : process.env.NEXT_PUBLIC_SITE_URL ?? 'https://megnav.me'
       try {
         const res = await axios.get<PageViewResponse>(`${baseURL}/api/pageviews?slug=${header.slug}`)
         setPostViews(res.data?.view ?? 0)

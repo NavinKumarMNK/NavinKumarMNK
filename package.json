@@ -1,5 +1,5 @@
 {
-  "name": "rizkicitra",
+  "name": "megnav",
   "version": "1.0.0",
   "private": true,
   "description": "My Personal Website, build with React, Next.js, MDX and Tailwind CSS",
@@ -72,14 +72,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rizkimcitra/rizkicitra.git"
+    "url": "git+https://github.com/NavinKumarMNK/NavinKumarMNK.git"
   },
-  "author": "Rizki Maulana Citra",
+  "author": "NavinKumarMNK",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rizkimcitra/rizkicitra/issues"
+    "url": "https://github.com/NavinKumarMNK/NavinKumarMNK/issues"
   },
-  "homepage": "https://github.com/rizkimcitra/rizkicitra#readme",
+  "homepage": "https://github.com/NavinKumarMNK/NavinKumarMNK#readme",
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"

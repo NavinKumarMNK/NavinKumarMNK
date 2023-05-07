@@ -19,8 +19,8 @@ export default class CustomDocument extends Document {
             crossOrigin='use-credentials'
           />
           <link rel='apple-touch-icon' sizes='180x180' href='/icon-192.png' />
-          <link rel='shortcut icon' href='/favicon.svg' type='svg/x-icon' />
-          <link rel='icon' href='/favicon.svg' type='svg/x-icon' />
+          <link rel='shortcut icon' href='/icon-nobg.png' type='svg/x-icon' />
+          <link rel='icon' href='/icon-nobg.png' type='svg/x-icon' />
           <link rel='manifest' href='/manifest.json' />
           {process.env.NODE_ENV === 'production' && (
             <Script
@@ -31,7 +31,7 @@ export default class CustomDocument extends Document {
               // please change to your data website id
               data-website-id='6daf05f5-92d2-430f-9cdd-1801014260da'
               // change to your hosted umami app
-              src='https://umami.rizkicitra.dev/umami.js'
+              src='https://umami.megnav.me/umami.js'
             />
           )}
         </Head>

@@ -47,3 +47,9 @@ temp
 
 **/public/*.xml
 **/public/robots.txt
+
+.prettierignore
+.eslintcache
+.eslintignore
+.eslint.js
+.prettierrc.js

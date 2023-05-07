@@ -1,19 +1,19 @@
 import SOCIAL from './social'
 
-import { Experience } from 'rizkicitra'
+import { Experience } from 'megnav'
 
 export const HEADLINE = {
-  name: 'Rizki Maulana Citra'
+  name: 'NavinKumarMNK'
 }
 
 export const LINKS: typeof SOCIAL = [
   ...SOCIAL.filter((s) => s.title !== 'Telegram'),
   {
-    href: 'https://rizkicitra.dev',
+    href: 'https://megnav.me',
     title: 'Website'
   },
   {
-    href: 'https://rizkicitra.dev/blog',
+    href: 'https://megnav.me/blog',
     title: 'Blog'
   }
 ]

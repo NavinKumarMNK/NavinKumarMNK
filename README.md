@@ -4,7 +4,7 @@ You can click the Preview link to take a look at your changes.
 --->
 
 <div align=center>
-<img align=center src="https://user-images.githubusercontent.com/70720874/232610574-8556267f-b91f-4934-bb44-84ba545ddaaa.png">
+<img align=center src="https://ik.imagekit.io/mnk/main-removebg-preview.png?updatedAt=1683444993946">
 </div>
 
 

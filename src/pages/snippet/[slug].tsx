@@ -18,7 +18,7 @@ import type { ParsedUrlQuery } from 'querystring'
 import { useMemo } from 'react'
 import readingTime from 'reading-time'
 import rehypeSlug from 'rehype-slug'
-import type { Snippet } from 'rizkicitra'
+import type { Snippet } from 'megnav'
 
 type SnippetPostProps = {
   header: Snippet
@@ -35,7 +35,7 @@ const SnippetPostPage: NextPage<SnippetPostProps> = ({ header, mdxSource }) => {
   const metaData = getMetaPage({
     title: header.title,
     description: header.summary,
-    og_image: generateOgImage({ title: header.title, subTitle: 'Snippet - rizkicitra.dev' }),
+    og_image: generateOgImage({ title: header.title, subTitle: 'Snippet - megnav.me' }),
     og_image_alt: header.title,
     keywords: [],
     slug: '/portfolio/' + header.slug

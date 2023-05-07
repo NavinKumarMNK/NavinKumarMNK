@@ -2,7 +2,7 @@ import { twclsx } from '@/libs'
 
 import { BlogItem } from './BlogItem'
 
-import type { Blog } from 'rizkicitra'
+import type { Blog } from 'megnav'
 
 type BlogListProps = {
   posts: Blog[]
