@@ -32,33 +32,18 @@ interface slug extends ParsedUrlQuery {
 }
 
 const PostPost: NextPage<PostPostProps> = ({ header, mdxSource }) => {
-  const [postViews, setPostViews] = useState<number>(0)
   const metaData = getMetaPagePost({
     ...header,
     slug: '/post/' + header.slug
   })
 
-  useEffect(() => {
-    // run only on client side
-    if (typeof window === 'undefined') return
-    ;(async () => {
-      const baseURL = isDev ? 'http://localhost:3000' : process.env.NEXT_PUBLIC_SITE_URL ?? 'https://megnav.me'
-      try {
-        const res = await axios.get<PageViewResponse>(`${baseURL}/api/pageviews?slug=${header.slug}`)
-        setPostViews(res.data?.view ?? 0)
-      } catch (error) {
-        console.info('Could not retrieve page views')
-      }
-    })()
-  }, [header.slug])
-
+  
   return (
-    <LayoutPage {...(metaData as LayoutPageProps)} className='pb-4'>
+    <LayoutPage className='max-w-[1600px] mt-2' {...(metaData as LayoutPageProps)}>
       <article className={twclsx('content-auto', 'flex flex-col', 'gap-8')}>
         <HeadingContent
           topics={header.topics}
           est_read={header.est_read}
-          postViews={postViews}
           published={header.published}
           summary={header.summary}
           title={header.title}
@@ -67,17 +52,17 @@ const PostPost: NextPage<PostPostProps> = ({ header, mdxSource }) => {
         <AuthorSection name={header.author_name} username={header.github_username} />
 
         <div
-          className={twclsx('prose dark:prose-invert', 'md:prose-lg', 'prose-headings:scroll-mt-24', 'prose-img:my-4')}
+          className={twclsx('prose dark:prose-invert', 'md:prose-md', 'prose-headings:scroll-mt-24', 'prose-img:my-4', 'max-w-full', 'md:mx-10', 'mx-2')}
         >
           <MDXRemote {...mdxSource} components={MDXComponents} />
         </div>
       </article>
 
-      <div className='flex flex-col space-y-2.5 md:space-y-0 md:flex-row md:items-center md:justify-between mt-8'>
-        <PRButton path={`/post/${header.slug}.mdx`} />
-
-        <ToTopButton />
-      </div>
+      <div className='mt-20 flex space-y-0 flex-row items-center justify-between'>
+          <div></div>
+          <div><ToTopButton /></div>
+          
+        </div>
     </LayoutPage>
   )
 }
