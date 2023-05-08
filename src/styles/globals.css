@@ -39,8 +39,11 @@
     @apply bg-theme-50 font-primary text-theme-700 antialiased dark:bg-theme-800 dark:text-theme-200;
   }
 
+  html.light{
+    @apply brightness-[0.92];
+  }
   html.dark {
-    @apply brightness-[0.98];
+    @apply brightness-[0.92];
   }
 
   :is(a, button) {

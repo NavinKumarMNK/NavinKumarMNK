@@ -84,22 +84,24 @@ const HomePage: NextPage<HomePageProps> = ({ posts, portfolios }) => {
               UnderGrad &amp; ML Engineer, Data Scientist
             </h2>
             </div>
-            <div className='[&>p:not(:last-child)]:mb-3'>
-              <p className='text-justify'>
-              Hello👋, This is <strong>Navin Kumar M</strong>, and I'm passionate about using <strong>Artificial Intelligence</strong> to solve <strong>Complex 
-                Real-World Problems </strong>. By leveraging the latest advancements in <strong>Deep Learning, </strong>  I strive to create innovative solutions that have a positive impact on society.
-                I invite you to have a glimpse of my journey as an <strong>AI Enthusiast </strong> and my expertise in various domains. 
-              </p><p className='text-justify'>
-              I have worked in fields like <strong>Computer Vision, Natural Language Processing,
-               Generative Models, Modelling Tabular & Time Series Data </strong>. I have worked on diverse projects that have helped me hone my skills and gain a deeper understanding of the field.
-              
-              </p>
-              <p className='text-justify'>
-                I am passionate about <strong>PreTraining Models on Large Data, Solving Complex Machine Learning Problems</strong> and enjoy deploying <strong>Production level Scalable Systems.</strong> I love
-                combining my technical knowledge and creativity to create and deploy entire <strong>MLOps Pipeline</strong> with full fledge working Application.
-              </p>
+            <div className='bg-white dark:bg-gray-900 rounded-lg shadow-lg p-6'>
+  <div className='space-y-3'>
+    <p className='text-justify'>
+      Hello👋, This is <strong>Navin Kumar M</strong>, and I'm passionate about using <strong>Artificial Intelligence</strong> to solve <strong>Complex 
+      Real-World Problems </strong>. By leveraging the latest advancements in <strong>Deep Learning, </strong>  I strive to create innovative solutions that have a positive impact on society.
+      I invite you to have a glimpse of my journey as an <strong>AI Enthusiast </strong> and my expertise in various domains. 
+    </p>
+    <p className='text-justify'>
+      I have worked in fields like <strong>Computer Vision, Natural Language Processing,
+       Generative Models, Modelling Tabular & Time Series Data </strong>. I have worked on diverse projects that have helped me hone my skills and gain a deeper understanding of the field.
+    </p>
+    <p className='text-justify'>
+      I am passionate about <strong>PreTraining Models on Large Data, Solving Complex Machine Learning Problems</strong> and enjoy deploying <strong>Production level Scalable Systems.</strong> I love
+      combining my technical knowledge and creativity to create and deploy entire <strong>MLOps Pipeline</strong> with full fledge working Application.
+    </p>
+  </div>
+</div>
 
-            </div>
           </div>
         </section>
 

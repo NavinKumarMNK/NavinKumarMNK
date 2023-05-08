@@ -14,13 +14,17 @@ export const PortfolioList: React.FunctionComponent<PortfolioListProps> = (props
       <h2 className='mb-1 md:mb-3'>{props.title}</h2>
       <p className='mb-6 md:mb-8'>{props.description}</p>
 
-      {props.portfolios.length > 0 && (
-        <div className='grid md:grid-cols-2 gap-5'>
-          {props.portfolios.map((item) => {
-            return <PortfolioItem key={item.slug} {...item} />
-          })}
-        </div>
-      )}
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+  {props.portfolios.map((item) => {
+    return (
+      <div key={item.slug} className="bg-white bg-opacity-70 dark:bg-gray-900 dark:bg-opacity-70 rounded-lg shadow-lg p-6 backdrop-filter backdrop-blur-md backdrop-opacity-80">
+        <PortfolioItem {...item} />
+      </div>
+    )
+  })}
+</div>
+
+
     </section>
   )
 }

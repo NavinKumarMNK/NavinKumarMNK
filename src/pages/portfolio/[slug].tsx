@@ -65,15 +65,17 @@ const ProjectDetailPage: NextPage<ProjectDetailPageProps> = ({ header, mdxSource
           priority
           fill
         />
-
-        <section className={twclsx('prose', 'dark:prose-invert', 'md:prose-lg')}>
+        
+        <div
+          className={twclsx('prose dark:prose-invert', 'md:prose-md', 'prose-headings:scroll-mt-24', 'prose-img:my-4', 'max-w-full', 'md:mx-10', 'mx-2')}
+        >
           <MDXRemote {...mdxSource} components={MDXComponents} />
-        </section>
+        </div>
 
-        <div className='flex flex-col space-y-2.5 md:space-y-0 md:flex-row md:items-center md:justify-between mt-5'>
-          <PRButton path={`/portfolio/${header.slug}.mdx`} />
-
-          <ToTopButton />
+        <div className='flex space-y-0 flex-row items-center justify-between mt-5'>
+          <div><PRButton path={`/portfolio/${header.slug}.mdx`} /></div>
+          <div><ToTopButton /></div>
+          
         </div>
       </article>
     </LayoutPage>

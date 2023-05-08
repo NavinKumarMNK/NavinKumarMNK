@@ -9,7 +9,7 @@ import { getContents } from '@/services'
 
 import { SECRET_KEY, isDev, isProd } from '@/libs/constants/environmentState'
 import { generateOgImage, getMetaPage } from '@/libs/metapage'
-import { getMostPopularPost, getNewestPost } from '@/libs/sorters'
+import { getNewestPost } from '@/libs/sorters'
 import { twclsx } from '@/libs/twclsx'
 
 import { useSearchPost } from '@/hooks'
@@ -39,8 +39,7 @@ const meta = getMetaPage({
 
 const PostPage: NextPage<PostPageProps> = ({ allPosts }) => {
   const search = useSearchPost(allPosts)
-  const mostViewdPosts = useMemo(() => allPosts.slice(0).sort(getMostPopularPost).slice(0, 2), [allPosts])
-
+  
   useEffect(() => {
     if (typeof window === 'undefined' || !isProd) return
     ;(async () => {

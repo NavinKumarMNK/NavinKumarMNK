@@ -36,14 +36,6 @@ export const PostItem: React.FunctionComponent<Post> = (props) => {
             <span className='text-sm font-semibold'>{props.est_read ?? '0 Min'}</span>
           </div>
 
-          {props.displayViews && (
-            <div className='inline-flex items-center space-x-2'>
-              <HiOutlineEye className='w-4 h-4' />
-              <span className='text-sm font-semibold'>
-                {props.views ? numberToCompact(props.views) + ' views' : '0 views'}
-              </span>
-            </div>
-          )}
         </div>
       </div>
       <p className='max-w-prose'>{props.summary}</p>

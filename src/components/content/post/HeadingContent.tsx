@@ -24,7 +24,7 @@ const config: Intl.DateTimeFormatOptions = {
 export const HeadingContent: React.FunctionComponent<HeadingContentProps> = (props) => {
   return (
     <section>
-      <h2 className={twclsx('max-w-prose', 'mt-3 text-2xl md:text-4xl')}>{props.title}</h2>
+      <h2 className={twclsx('max-w-prose', 'mt-3 text-1xl md:text-3xl')}>{props.title}</h2>
 
       <div className='flex items-center space-x-2.5 mt-8 mb-4'>
         {props.topics.map((topic) => (
@@ -39,10 +39,6 @@ export const HeadingContent: React.FunctionComponent<HeadingContentProps> = (pro
             <p>{props.est_read}</p>
           </div>
 
-          <div className={twclsx('flex items-center', 'gap-2', 'text-sm md:text-base')}>
-            <HiOutlineEye className={twclsx('text-lg')} />
-            {props.postViews > 0 ? <p>{props.postViews} views</p> : <p>—</p>}
-          </div>
         </div>
         <div className={twclsx('flex items-center', 'gap-2')}>
           <HiOutlineCalendar className={twclsx('text-lg')} />
