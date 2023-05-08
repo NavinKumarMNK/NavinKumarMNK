@@ -9,7 +9,6 @@ type HeadingContentProps = {
   title: string
   summary: string
   published: string
-  postViews: number
   est_read?: string
   topics: string[]
 }

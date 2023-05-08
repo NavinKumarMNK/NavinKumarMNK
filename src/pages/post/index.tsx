@@ -18,7 +18,7 @@ import axios from 'axios'
 import { GetStaticProps, NextPage } from 'next'
 import { useEffect, useMemo } from 'react'
 import readingTime from 'reading-time'
-import type { Post, PageViewResponse } from 'megnav'
+import type { Post } from 'megnav'
 
 type PostPageProps = {
   allPosts: Array<Post>
@@ -60,17 +60,10 @@ const PostPage: NextPage<PostPageProps> = ({ allPosts }) => {
       {allPosts.length > 0 && search.query.length === 0 ? (
         <div className={twclsx('flex flex-col', 'gap-24')}>
           
-          {/*<PostList
-            displayViews
-            posts={mostViewdPosts}
-            title='Most Viewed'
-            description='Hey, I thought you might be interested in checking out my most-viewed post. Feel free to give it a read.'
-          />
-          */}
           
           <PostList
             posts={allPosts}
-            displayViews
+
             title=''
             description=""
           />
@@ -82,7 +75,6 @@ const PostPage: NextPage<PostPageProps> = ({ allPosts }) => {
           {search.filteredPost.length > 0 ? (
             <PostList
               description="I've found some possible results for your search."
-              displayViews
               posts={search.filteredPost}
               title='Search Post'
             />
@@ -109,11 +101,9 @@ export const getStaticProps: GetStaticProps<PostPageProps> = async () => {
   const posts: Post[] = []
 
   const requests = response.map(async (r) => {
-    const res = await axios.get<PageViewResponse>(baseURL + '/api/pageviews?slug=' + r.header.slug)
     const est_read = readingTime(r.content).text
-    const views = res.data.view ?? 0
-
-    return { ...r.header, views, est_read } as Post
+    
+    return { ...r.header, est_read } as Post
   })
 
   const settles = await Promise.allSettled(requests)

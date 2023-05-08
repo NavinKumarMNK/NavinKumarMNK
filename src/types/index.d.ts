@@ -11,9 +11,7 @@ declare module 'megnav' {
     topics: Array<string>
     keywords: Array<string>
     related: Array<string>
-    views?: number
     est_read?: string
-    displayViews?: boolean
   }
   /** Type used for portfolio or meta data for portfolio */
   export type Portfolio = {
@@ -76,13 +74,6 @@ declare module 'megnav' {
   /** a type used for list of certificate later on certificate page */
   export type Certificate = { title: string; src: string }
 
-  /** a type for pageView from umami */
-  export type PageView = {
-    bounces: { value: number; change: number }
-    pageviews: { value: number; change: number }
-    totaltime: { value: number; change: number }
-    unique: { value: number; change: number }
-  }
 
   export type Timeline = {
     title: string
@@ -93,8 +84,4 @@ declare module 'megnav' {
     type: 'edu' | 'work'
   }
 
-  export type PageViewResponse = {
-    message: string
-    view: number | null
-  }
 }

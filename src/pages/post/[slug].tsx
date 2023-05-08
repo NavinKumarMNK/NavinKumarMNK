@@ -12,7 +12,6 @@ import { isDev } from '@/libs/constants/environmentState'
 import { getMetaPagePost } from '@/libs/metapage'
 import { twclsx } from '@/libs/twclsx'
 
-import axios from 'axios'
 import { GetStaticPaths, GetStaticPathsResult, GetStaticProps, NextPage } from 'next'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
@@ -20,7 +19,7 @@ import { ParsedUrlQuery } from 'querystring'
 import { useEffect, useState } from 'react'
 import readingTime from 'reading-time'
 import rehypeSlug from 'rehype-slug'
-import type { Post, PageViewResponse } from 'megnav'
+import type { Post } from 'megnav'
 
 interface PostPostProps {
   mdxSource: MDXRemoteSerializeResult
