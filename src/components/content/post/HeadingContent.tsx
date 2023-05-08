@@ -24,7 +24,7 @@ const config: Intl.DateTimeFormatOptions = {
 export const HeadingContent: React.FunctionComponent<HeadingContentProps> = (props) => {
   return (
     <section>
-      <h1 className={twclsx('max-w-prose', 'text-3xl md:text-5xl')}>{props.title}</h1>
+      <h2 className={twclsx('max-w-prose', 'mt-3 text-2xl md:text-4xl')}>{props.title}</h2>
 
       <div className='flex items-center space-x-2.5 mt-8 mb-4'>
         {props.topics.map((topic) => (

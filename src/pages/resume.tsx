@@ -69,7 +69,33 @@ const Resume: NextPage = () => {
         </div>
       </section>
 
-      <section>
+      <div className='space-y-8'>
+        <section>
+          <div className='flex items-center justify-between pb-2.5 border-b-2 border-b-theme-700'>
+            <h3>Summary</h3>
+
+            <UnstyledButton onClick={openPopup} className='print:hidden'>
+              <HiInformationCircle className='text-red-500 animate-pulse text-lg' />
+              <span className='sr-only'>How to print?</span>
+            </UnstyledButton>
+          </div>
+
+          <ul className={listStyle}>
+            {SUMMARY.map((summ, idx) => {
+              return (
+                <li key={idx}>
+                  {htmr(summ, {
+                    transform: {
+                      a: (props) => <UnderlineLink href={props.href ?? ''}>{props.children}</UnderlineLink>
+                    }
+                  })}
+                </li>
+              )
+            })}
+          </ul>
+        </section>
+
+        <section>
           <h3 className='pb-2.5 border-b-2 border-b-theme-700'>Education</h3>
 
           {EDUCATION.map((ed) => (
@@ -97,32 +123,6 @@ const Resume: NextPage = () => {
               )}
             </div>
           ))}
-        </section>
-
-      <div className='space-y-8'>
-        <section>
-          <div className='flex items-center justify-between pb-2.5 border-b-2 border-b-theme-700'>
-            <h3>Summary</h3>
-
-            <UnstyledButton onClick={openPopup} className='print:hidden'>
-              <HiInformationCircle className='text-red-500 animate-pulse text-lg' />
-              <span className='sr-only'>How to print?</span>
-            </UnstyledButton>
-          </div>
-
-          <ul className={listStyle}>
-            {SUMMARY.map((summ, idx) => {
-              return (
-                <li key={idx}>
-                  {htmr(summ, {
-                    transform: {
-                      a: (props) => <UnderlineLink href={props.href ?? ''}>{props.children}</UnderlineLink>
-                    }
-                  })}
-                </li>
-              )
-            })}
-          </ul>
         </section>
 
         <section>

@@ -35,7 +35,7 @@ const ProjectDetailPage: NextPage<ProjectDetailPageProps> = ({ header, mdxSource
   })
 
   return (
-    <LayoutPage seo={metaData}>
+    <LayoutPage className='max-w-[1600px] mt-2' seo={metaData}>
       <article className={twclsx('flex flex-col', 'gap-8')}>
         <HeadingPortfolio {...header} />
 

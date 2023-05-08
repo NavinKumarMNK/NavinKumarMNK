@@ -14,7 +14,7 @@ export const PostItem: React.FunctionComponent<Post> = (props) => {
     <div className='w-full mb-5 md:mb-7 last:mb-0'>
       <h3>
         <UnstyledLink
-          className='border-b-2 border-dashed border-transparent hover:border-theme-500 dark:hover:border-theme-300'
+          className='border-b-2  border-transparent hover:border-theme-500 dark:hover:border-theme-300'
           href={urlPost}
         >
           {props.title}

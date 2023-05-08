@@ -45,8 +45,15 @@ export const Header: React.FunctionComponent = () => {
             return (
               <UnstyledLink
                 className={twclsx(
-                  'font-semibold border-b-3 border-dashed',
-                  router.pathname === route.path ? 'border-theme-800 dark:border-theme-200' : 'border-transparent'
+                  'relative inline-flex items-center',
+                  'border-b',
+                  '',
+                  'text-primary-700 dark:text-primary-400 font-semibold',
+                  'after:absolute after:left-0 after:-bottom-0.5',
+                  'after:w-0 after:h-0.5 after:transition-all after:duration-300 hover:after:w-full',
+                  'after:bg-gradient-to-r after:from-primary-500 after:to-ternary-500',
+                
+                  router.pathname === route.path ? 'border-b-theme-900 dark:border-theme-200' : 'border-transparent'
                 )}
                 href={route.path}
                 key={route.path}

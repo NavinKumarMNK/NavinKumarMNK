@@ -12,7 +12,7 @@ export const LabelPost: React.FunctionComponent<LabelProps> = (props) => {
   const type = toLowerCase(props.type)
 
   switch (type) {
-    case 'devlife':
+    case 'python':
       return (
         <span
           className={twclsx(
@@ -25,7 +25,7 @@ export const LabelPost: React.FunctionComponent<LabelProps> = (props) => {
         </span>
       )
 
-    case 'react':
+    case 'pytorch':
       return (
         <span
           className={twclsx(baseClass, 'text-sky-700 bg-sky-100 dark:text-sky-100 dark:bg-sky-900', props.className)}
@@ -34,7 +34,7 @@ export const LabelPost: React.FunctionComponent<LabelProps> = (props) => {
         </span>
       )
 
-    case 'nextjs':
+    case 'nodejs':
       return (
         <span
           className={twclsx(
@@ -74,8 +74,7 @@ export const LabelPost: React.FunctionComponent<LabelProps> = (props) => {
         </span>
       )
 
-    case 'webdev':
-    case 'web dev':
+    case 'deep learning':
       return (
         <span
           className={twclsx(
@@ -88,7 +87,7 @@ export const LabelPost: React.FunctionComponent<LabelProps> = (props) => {
         </span>
       )
 
-    case 'web analytics':
+    case 'cloud':
       return (
         <span
           className={twclsx(
@@ -101,7 +100,7 @@ export const LabelPost: React.FunctionComponent<LabelProps> = (props) => {
         </span>
       )
 
-    case 'hooks':
+    case 'backend':
       return (
         <span
           className={twclsx(
@@ -114,72 +113,12 @@ export const LabelPost: React.FunctionComponent<LabelProps> = (props) => {
         </span>
       )
 
-    case 'state management':
-      return (
-        <span
-          className={twclsx(baseClass, 'text-rose-700 bg-rose-100 dark:text-rose-50 dark:bg-rose-800', props.className)}
-        >
-          {props.type}
-        </span>
-      )
-    case 'baas':
-      return (
-        <span
-          className={twclsx(
-            baseClass,
-            'bg-purple-100 text-purple-700 dark:bg-purple-500 dark:text-purple-50',
-            props.className
-          )}
-        >
-          {props.type}
-        </span>
-      )
-    case 'supabase':
-      return (
-        <span
-          className={twclsx(
-            baseClass,
-            'bg-emerald-100 text-emerald-700 dark:bg-emerald-500 dark:text-black',
-            props.className
-          )}
-        >
-          {props.type}
-        </span>
-      )
-
-    case 'ux':
-    case 'user experience':
-      return (
-        <span
-          className={twclsx(
-            baseClass,
-            'text-orange-700 dark:text-orange-200 bg-orange-100 dark:bg-orange-800',
-            props.className
-          )}
-        >
-          {props.type}
-        </span>
-      )
-
-    case 'accessibility':
-      return (
-        <span
-          className={twclsx(
-            baseClass,
-            'text-violet-700 dark:text-violet-200 bg-violet-100 dark:bg-violet-800',
-            props.className
-          )}
-        >
-          {props.type}
-        </span>
-      )
-
     default:
       return (
         <span
           className={twclsx(
             baseClass,
-            'text-neutral-700 dark:text-neutral-200 bg-neutral-100 dark:bg-neutral-800',
+            'text-rose-700 bg-rose-100 dark:text-rose-50 dark:bg-rose-800',
             props.className
           )}
         >

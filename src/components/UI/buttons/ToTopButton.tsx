@@ -16,7 +16,7 @@ export const ToTopButton: React.FunctionComponent<UnstyledButtonProps> = (props)
       className={twclsx(
         'justify-start text-sm md:text-base',
         'space-x-1.5 py-1 max-w-max',
-        'border-b-2 border-dashed',
+        'border-b-2 ',
         'border-theme-500',
         props.className
       )}

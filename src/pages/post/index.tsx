@@ -53,25 +53,27 @@ const PostPage: NextPage<PostPageProps> = ({ allPosts }) => {
   }, [])
 
   return (
-    <LayoutPage className='max-w-[1600px]' {...(meta as LayoutPageProps)}>
+    <LayoutPage className='mt-3 max-w-[1600px]' {...(meta as LayoutPageProps)}>
       <Hero title={meta.title as string} description={meta.description as string} />
 
       <Searchbar onChange={search.handleChange} value={search.query} />
 
       {allPosts.length > 0 && search.query.length === 0 ? (
         <div className={twclsx('flex flex-col', 'gap-24')}>
-          <PostList
+          
+          {/*<PostList
             displayViews
             posts={mostViewdPosts}
             title='Most Viewed'
             description='Hey, I thought you might be interested in checking out my most-viewed post. Feel free to give it a read.'
           />
-
+          */}
+          
           <PostList
             posts={allPosts}
             displayViews
-            title='All Post'
-            description="It looks like you're interested in my posts. You're welcome to take a look and read them, and they're sorted by date so you can easily find the newest ones."
+            title=''
+            description=""
           />
         </div>
       ) : null}

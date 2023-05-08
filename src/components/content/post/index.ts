@@ -1,4 +1,3 @@
-export * from './GiscusComment'
 export * from './LabelPost'
 export * from './AuthorSection'
 export * from './HeadingContent'

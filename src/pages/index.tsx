@@ -121,15 +121,9 @@ const HomePage: NextPage<HomePageProps> = ({ posts, portfolios }) => {
         </div>
       </main>
 
-      { isSmallScreen ? (
-      <div className='absolute h-14 md:h-16 md:mb-3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 items-center text-center'>
-      <Footer/>
-    </div>
-    ) : (
-      <div className='relative flex h-14 md:h-16 md:mb-3'>
-      <Footer/>
-    </div>
-    )}
+     <Footer/>
+ 
+   
      
     </>
   )

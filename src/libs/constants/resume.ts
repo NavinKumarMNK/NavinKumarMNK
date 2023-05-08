@@ -96,12 +96,12 @@ export const EDUCATION: Education = [
     'Relavant Coursework : ', 'Machine Learning, Deep Learning, Data Structures & Algorithms, Operating System, Business Intelligence, Malware & Security Intelligence, Computer Networks, Database Management, Applied Linear Algebra, Statistics, Engineering Calculus & Software Engineering']  
   },
   {
-    school: '12th Grade CBSE',
+    school: 'Grade 12 - CBSE',
     period: {
       start: 'June, 2018',
       end: 'July, 2020'
     },
-    paragraphs: ['JEE Mains - 98.92%ile ', 'Board (MPC) - 95%']
+    paragraphs: ['Velammal Mel Aynambakkam, Chennai','JEE Mains - 98.92%ile ', 'Board (MPC) - 95%']
   }
 ]
 

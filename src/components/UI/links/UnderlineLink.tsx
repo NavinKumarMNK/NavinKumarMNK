@@ -8,7 +8,7 @@ export const UnderlineLink: React.FunctionComponent<UnstyledLinkProps> = ({ href
     <UnstyledLink
       className={twclsx(
         'relative inline-flex items-center',
-        'border-b border-dashed no-underline',
+        'border-b no-underline',
         'border-theme-900 dark:border-theme-200',
         'text-primary-700 dark:text-primary-400 font-semibold',
         'after:absolute after:left-0 after:-bottom-0.5',

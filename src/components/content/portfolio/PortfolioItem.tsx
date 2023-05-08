@@ -25,7 +25,7 @@ export const PortfolioItem: React.FunctionComponent<Portfolio> = (props) => {
         <h3>
           <UnstyledLink
             href={urlPortfolio}
-            className='border-b-2 border-dashed border-transparent hover:border-theme-500 dark:hover:border-theme-300'
+            className='border-b-2  border-transparent hover:border-theme-500 dark:hover:border-theme-300'
           >
             {props.title}
           </UnstyledLink>

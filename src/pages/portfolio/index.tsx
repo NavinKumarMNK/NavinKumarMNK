@@ -39,16 +39,16 @@ const ProjectPage: NextPage<PortfoliopageProps> = ({ portfolio }) => {
   const search = useSearchPortfolio(portfolio)
 
   return (
-    <LayoutPage className='max-w-[1600px]' seo={meta}>
+    <LayoutPage className='max-w-[1600px]  mt-2' seo={meta}>
       <Hero title={meta.title as string} description={meta.description as string} />
       <Searchbar onChange={search.handleChange} value={search.query} />
 
       <div className={twclsx('flex flex-col gap-8')}>
         {search.query === '' && portfolio.length > 0 && (
           <PortfolioList
-            description="I've put together a portfolio of my personal work, mostly from my junior years. You're welcome to take a look and explore. Some of the portfolios even have website demos that you can try out if you'd like."
+            description="I've put together a portfolio of my projects. You're welcome to take a look and explore. Some of the portfolios even have website demos that you can try out if you'd like."
             portfolios={portfolio}
-            title='Personal Portfolio'
+            title=''
           />
         )}
 
@@ -56,7 +56,7 @@ const ProjectPage: NextPage<PortfoliopageProps> = ({ portfolio }) => {
           <PortfolioList
             description="I've found some possible results for your search."
             portfolios={search.filteredPortfolio}
-            title='Search Portfolio'
+            title=''
           />
         )}
 

@@ -16,7 +16,16 @@ import {
   SiSupabase,
   SiTailwindcss,
   SiTypescript,
-  SiVite
+  SiVite,
+  SiPytorch,
+  SiPytorchlightning,
+  SiPython,
+  SiTensorflow,
+  SiOpencv,
+  SiNumpy,
+  SiPandas,
+  SiScikitlearn,
+  SiRay
 } from 'react-icons/si'
 
 type IconStackProps = {
@@ -77,6 +86,33 @@ export const IconStack: React.FunctionComponent<IconStackProps> = ({ type, class
 
     case 'go':
       return <SiGo className={twclsx('text-emerald-600 dark:text-emerald-500', className)} />
+
+    case 'pytorch':
+      return <SiPytorch className={twclsx('text-red-500', className)} />
+
+    case 'pytorch lightning':
+      return <SiPytorchlightning className={twclsx('text-violet-500', className)} />
+    
+    case 'ray':
+      return <SiRay className={twclsx('text-blue-500', className)} />
+
+    case 'python':
+      return <SiPython className={twclsx('text-blue-500', className)} />
+
+    case 'tensorflow':
+      return <SiTensorflow className={twclsx('text-amber-500', className)} />
+
+    case 'opencv':
+      return <SiOpencv className={twclsx('text-amber-500', className)} />
+
+    case 'numpy':
+      return <SiNumpy className={twclsx('text-green-500', className)} />
+
+    case 'pandas':
+      return <SiPandas className={twclsx('text-amber-500', className)} />
+
+    case 'scikit-learn':
+      return <SiScikitlearn className={twclsx('text-red-500', className)} />
 
     default:
       return <SiCodesandbox className={twclsx('text-slate-900 dark:text-slate-800', className)} />

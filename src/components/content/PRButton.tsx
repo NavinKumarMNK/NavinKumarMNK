@@ -20,7 +20,7 @@ export const PRButton: React.FunctionComponent<PRButtonProps> = (props) => {
   return (
     <UnstyledLink
       title='Edit on GitHub'
-      className='inline-flex items-center text-sm md:text-base py-1 max-w-max space-x-1.5 border-b-2 border-dashed border-theme-500 text-theme-800 dark:text-theme-200'
+      className='inline-flex items-center text-sm md:text-base py-1 max-w-max space-x-1.5 border-b-2  border-theme-500 text-theme-800 dark:text-theme-200'
       href={`https://github.com/NavinKumarMNK/megnav/edit/main/src/data` + props.path}
     >
       <HiExternalLink className='w-5 h-5' />

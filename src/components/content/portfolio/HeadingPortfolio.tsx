@@ -14,7 +14,7 @@ type HeadingPortfolioProps = {
 export const HeadingPortfolio: React.FunctionComponent<HeadingPortfolioProps> = (props) => {
   return (
     <section className={twclsx('pb-8')}>
-      <h1 className={twclsx('max-w-prose text-3xl md:text-5xl')}>
+      <h1 className={twclsx('max-w-prose text-2xl md:text-4xl')}>
         {props.title.split('').map((c, i) => (
           <span key={i}>{c}</span>
         ))}

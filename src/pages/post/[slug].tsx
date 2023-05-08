@@ -1,6 +1,6 @@
 import { ToTopButton } from '@/components/UI/buttons'
 import { PRButton } from '@/components/content'
-import { AuthorSection, GiscusComment, HeadingContent } from '@/components/content/post'
+import { AuthorSection, HeadingContent } from '@/components/content/post'
 import { MDXComponents } from '@/components/content/mdx'
 
 import { LayoutPage } from '@/UI/templates'
@@ -72,8 +72,6 @@ const PostPost: NextPage<PostPostProps> = ({ header, mdxSource }) => {
           <MDXRemote {...mdxSource} components={MDXComponents} />
         </div>
       </article>
-
-      <GiscusComment />
 
       <div className='flex flex-col space-y-2.5 md:space-y-0 md:flex-row md:items-center md:justify-between mt-8'>
         <PRButton path={`/post/${header.slug}.mdx`} />
