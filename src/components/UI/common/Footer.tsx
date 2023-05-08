@@ -17,7 +17,7 @@ export const Footer: React.FunctionComponent = () => {
 
   return (
     <footer className={twclsx('layout', 'py-4 mt-5', 'border-t', 'border-theme-300 dark:border-theme-700')}>
-      <div className='w-full flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-3 md:justify-between'>
+      <div className='flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-3 md:justify-between'>
         <div className='flex flex-col md:flex-row space-y-3 md:space-x-3 md:space-y-0 w-full md:max-w-max'>
           {APP_ROUTE.map((route) => (
             <UnstyledLink
@@ -29,7 +29,7 @@ export const Footer: React.FunctionComponent = () => {
             </UnstyledLink>
           ))}
         </div>
-        <div className='mt-4 max-w-max'>
+        <div className='mt-4'>
         <SocialHome />
       </div>
       </div>

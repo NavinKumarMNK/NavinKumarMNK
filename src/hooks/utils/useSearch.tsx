@@ -1,8 +1,7 @@
 import { useCallback, useMemo, useState, useTransition } from 'react'
-import type { Post, Portfolio, Snippet } from 'megnav'
+import type { Post, Portfolio} from 'megnav'
 
-type Data = Array<Post> | Array<Portfolio> | Array<Snippet>
-
+type Data = Array<Post> | Array<Portfolio>
 export const useSearch = <T,>(data: Data, type: 'post' | 'portfolio' | 'snippet') => {
   const [query, setQuery] = useState<string>('')
   const [isPending, startTransition] = useTransition()
@@ -29,17 +28,6 @@ export const useSearch = <T,>(data: Data, type: 'post' | 'portfolio' | 'snippet'
           const newData = res.filter((r) => {
             return (
               r.stack.map(mapArrayString).includes(true) || r.title.toLowerCase().includes(e.target.value.toLowerCase())
-            )
-          })
-
-          setFilteredData(newData)
-        } else if (type === 'snippet') {
-          const res = data as Array<Snippet>
-          const newData = res.filter((r) => {
-            return (
-              r.topic.toLowerCase().includes(e.target.value.toLowerCase()) ||
-              r.title.toLowerCase().includes(e.target.value.toLowerCase()) ||
-              r.summary.toLowerCase().includes(e.target.value.toLowerCase())
             )
           })
 

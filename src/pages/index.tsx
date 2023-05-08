@@ -11,6 +11,7 @@ import { getNewestPost, getNewestPortfolio } from '@/libs/sorters'
 import type { GetStaticProps, NextPage } from 'next'
 import readingTime from 'reading-time'
 import type { Post, Portfolio } from 'megnav'
+import { useMediaQuery } from '@mui/material';
 
 interface HomePageProps {
   posts: Array<Post>
@@ -28,35 +29,61 @@ const HomePage: NextPage<HomePageProps> = ({ posts, portfolios }) => {
     slug: '/',
     type: 'website'
   })
+
+  const isSmallScreen = useMediaQuery('(max-width: 768px)');
+
   return (
     <>
       <CustomSeo {...meta} />
 
-      <div className='w-full h-40 md:layout pattern ' />
+      <div className='w-full h-36 md:h-40 md:layout pattern ' />
 
-      <main className='layout max-w-[1600px]'>
+      <main className='sm:items-center layout max-w-[1600px]'>
         <section className='flex flex-col'>
-          <div className='relative flex h-14 md:h-16'>
-            <ContentImage
-              src='https://ik.imagekit.io/mnk/NavinKumarMNK.jpg?updatedAt=1683442016874'
-              alt='Navin Kumar M'
-              width={146}
-              height={146}
-              className='rounded-full absolute left-5 bottom-0.5 cursor-pointer border-theme-50 dark:border-theme-900'
-              title="Navin Kumar M's Profile Picture"
-              quality={100}
-              priority
-            />
-            <SocialHome className='ml-auto max-w-max' />
-          </div>
-          
+        {isSmallScreen ? (
+  <div className='h-14 md:h-16'>
+    <div className='absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+      <ContentImage
+        src='https://ik.imagekit.io/mnk/NavinKumarMNK.jpg?updatedAt=1683442016874'
+        alt='Navin Kumar M'
+        width={116}
+        height={116}
+        className='rounded-full cursor-pointer border-theme-50 dark:border-theme-900'
+        title="Navin Kumar M's Profile Picture"
+        quality={100}
+        priority
+      />
+      <SocialHome className='mt-3' />
+    </div>
+  </div>
+) : (
+  <div className='relative flex h-14 md:h-16'>
+    <ContentImage
+      src='https://ik.imagekit.io/mnk/NavinKumarMNK.jpg?updatedAt=1683442016874'
+      alt='Navin Kumar M'
+      width={128}
+      height={128}
+      className='rounded-full absolute left-5 bottom-0.5 cursor-pointer border-theme-50 dark:border-theme-900'
+      title="Navin Kumar M's Profile Picture"
+      quality={100}
+      priority
+    />
+    <SocialHome className='ml-auto max-w-max' />
+  </div>
+)}
+{isSmallScreen && (
+  <div className='h-4' style={{ marginTop: '1rem' }}>
+    {/* Next div elements */}
+  </div>
+)}
 
-          <div className='mt-3 md:mt-6'>
+          <div className='mt-3 md:mt-6 ' >
+            <div className='text-center md:text-left'>
             <h1>Navin Kumar M</h1>
-            <h2 className='max-w-max mb-7 text-transparent font-bold text-xl md:text-2xl bg-clip-text bg-gradient-to-r from-primary-500 to-ternary-500 dark:text-transparent'>
+            <h2 className='mb-7 text-transparent font-bold text-xl md:text-2xl bg-clip-text bg-gradient-to-r from-primary-500 to-ternary-500 dark:text-transparent'>
               UnderGrad &amp; ML Engineer, Data Scientist
             </h2>
-
+            </div>
             <div className='[&>p:not(:last-child)]:mb-3'>
               <p className='text-justify'>
               Hello👋, This is <strong>Navin Kumar M</strong>, and I'm passionate about using <strong>Artificial Intelligence</strong> to solve <strong>Complex 
@@ -78,8 +105,9 @@ const HomePage: NextPage<HomePageProps> = ({ posts, portfolios }) => {
 
         <SkillsList />
 
+        <div className='text-center md:text-left'>
         <PostList
-          className='pt-32'
+          className='pt-4'
           description="If you're looking for some of my interesting works, check out my featured post"
           posts={posts}
           title='Featured Post'
@@ -90,9 +118,19 @@ const HomePage: NextPage<HomePageProps> = ({ posts, portfolios }) => {
           title='Featured Portfolio'
           portfolios={portfolios}
         />
+        </div>
       </main>
 
-      <Footer />
+      { isSmallScreen ? (
+      <div className='absolute h-14 md:h-16 md:mb-3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 items-center text-center'>
+      <Footer/>
+    </div>
+    ) : (
+      <div className='relative flex h-14 md:h-16 md:mb-3'>
+      <Footer/>
+    </div>
+    )}
+     
     </>
   )
 }
