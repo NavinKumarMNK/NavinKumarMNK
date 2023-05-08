@@ -30,15 +30,7 @@ declare module 'megnav' {
     }
   }
   /** Type used for snippet or meta data for snippet */
-  export type Snippet = {
-    title: string
-    summary: string
-    topic: string
-    created_at: string
-    slug: string
-    author: string
-    github_username: string
-  }
+
   /** Payload for utils to generate og image, return value will be a string from https://og-image.vercel.app */
   export type genOgImagePayload = {
     title: string
@@ -69,6 +61,11 @@ declare module 'megnav' {
     lists: string[]
   }
   // a section for resume - end
+
+  export type Projects = {
+    projectName: string
+    lists: string[]
+  }
 
   /** a type used for social like facebook, provide text to displayed to view and an for the URL*/
   export type Social = {

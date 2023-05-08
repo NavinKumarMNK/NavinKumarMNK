@@ -1,6 +1,6 @@
 import SOCIAL from './social'
 
-import { Experience } from 'megnav'
+import { Experience, Projects } from 'megnav'
 
 export const HEADLINE = {
   name: 'NavinKumarMNK'
@@ -19,46 +19,58 @@ export const LINKS: typeof SOCIAL = [
 ]
 
 export const SKILLS = [
-  `Knowledgeable in web standards and best practices, including HTML, CSS, and JavaScript. Also use TypeScript for type safety, and implement best practices to ensure the highest level of quality and reliability.`,
-  `Implement React Query to synchronize data between the server and client, ensuring that users have access to the latest information while maintaining optimal application performance."`,
-  `Proficient in frontend technologies, particularly within the React.js ecosystem, including React.js, and Next.js.`,
-  `Skilled in UI development, accessibility, user experience, and performance optimization.`,
-  `Able to adapt to new technologies and maintain best practices. Committed to delivering high-quality, user-centered, and scalable web applications.`,
-  `Familiar with design tools such as Figma.`
+  `Frameworks: PyTorch, Tensorflow, AWS, MLFlow, Ray, Tauri`,
+  `Languages: Python, TypeScript, C++, Rust, Node.js, MongoDB, MySQL, Tailwind CSS`,
+  `AI & ML Expertise: Computer Vision, NLP, Generative Models, LightGBM, SVM`,
+  `Soft Skills: Strong leadership and Real World Problem Solving, passionate and hardworking attitude.`
 ]
 
-export const KEY_SKILLS = [
-  `As a professional, I am proficient in Continuous Integration & Continuous Deployment, and I am well-versed in the Design Thinking Process.`,
-  `I am also skilled in Critical Thinking & Problem Solving, and I am committed to creating accessible Frontend Applications.`,
-  `I am highly adaptable and thrive in team-oriented environments. I am also known for my creativity and ability to approach tasks and challenges with an innovative mindset.`
-]
 
 export const EXPERIENCE: Experience[] = [
   {
-    companyName: 'Skyshi Digital Indonesia',
-    role: 'Frontend Developer',
+    companyName: 'Omega Plus Technologies, CA',
+    role: 'Deep Learning Engineer Remote Intern',
     period: {
-      start: 'April, 2022',
-      end: 'Present'
+      start: 'Dec 2022',
+      end: 'Feb 2023' 
     },
     lists: [
-      `Responsible to build internal and external application, mostly external client from local to international with modern web app technology with React and Next.js`,
-      `Responsible to deliver fast and optimized application, write browser backward compatibility with babel, deliver responsive-friendly and cross browser application with autoprefixer and postcss.`,
-      `Develop and maintain features from low to high impact, make sure to deliver high user experience frontend application that passed web accessibility standard.`,
-      `Write clean and maintainable code with TypeScript.`
+      `Built a Real-time Face Detection and Recognition System for crowd surveillance using yolov7, Kalman
+      Filter, ESPCNv2 GAN and containerized with Nvidia-Docker.`,
+      `Optimized for real-time inference with TensorRT and deployed as an API service in the cloud.`
+    ]
+  }
+]
+
+export const PROJECTS: Projects[] = [
+  {
+    projectName: 'AI Malware System',
+    lists: [
+      `Developed a cross-platform antivirus app with an AI-powered backend for malware detection and analysis
+      on Azure.`,
+      `Pretrained CoAtNet on 1.5 Million Malware Image Dataset achieving benchmark, LightGBM, and LSTM
+      models for feature analysis and developed the frontend with TypeScript and Rust.`,
+      `Created a Web App, Node.js as backend deployed on AWS Cloud.`,
+      `Set up an ETL pipeline Azure Databricks and Visualized Insights on PowerBI.`
     ]
   },
   {
-    companyName: 'Skyshi Digital Indonesia',
-    role: 'Frontend Developer Intern',
-    period: {
-      start: 'January, 2021',
-      end: 'March, 2022'
-    },
+    projectName: 'Crime Anomaly & Activity Detection',
     lists: [
-      `Responsible to develop specific features on internal project using React.js, Vue.js and Chakra UI.`,
-      `Deliver responsive-friendly and cross browser application with autoprefixer and postcss.`,
-      `Slicing design from figma to React component for CV template on <a href='https://gethired.id/cv-online'>gethired.id</a>.`
+      `Deployed a WebSocket API endpoint for camera communication and anomaly detection using video sequence
+      analysis`,
+      `Pretrained EfficientNetv2M, SwinTransformer, and CoATNet as AutoEncoders on the UCF-Crime
+      Dataset. Classified anomalies using One Class SVM and increased accuracy with an LSTM Decoder model.`,
+      `Implemented a Face Recognition Mechanism to detect the faces of victims and attackers.`
+    ]
+  },
+  {
+    projectName: 'Parallel & Distributed System Workspace',
+    lists: [
+      `No Code Lab Setup and Model Training Environment Documented for reproducibility.`,
+      `As the head of the Distributed System team, developed a solution to parallelize the processing of General
+      Circulation Model and Deep Learning Model training and inference by distributing the workload across GPUs
+      in a Ray cluster.`
     ]
   }
 ]
@@ -75,19 +87,27 @@ type Education = Array<{
 
 export const EDUCATION: Education = [
   {
-    school: 'Vocational High School of 8 Pandeglang',
+    school: 'B.Tech Computer Science and Engeneering specialization in Artificial Intelligence and Machine Learning',
     period: {
-      start: 'July, 2018',
-      end: 'May, 2021'
+      start: 'Sept, 2020',
+      end: 'May, 2024'
     },
-    paragraphs: ['Choosing Software Engineering as my main major.', 'Graduated in May, 2021.']
+    paragraphs: ['Vellore Insitute of Technology, Chennai', 'Cum.GPA : 8.8',
+    'Relavant Coursework : ', 'Machine Learning, Deep Learning, Data Structures & Algorithms, Operating System, Business Intelligence, Malware & Security Intelligence, Computer Networks, Database Management, Applied Linear Algebra, Statistics, Engineering Calculus & Software Engineering']  
+  },
+  {
+    school: '12th Grade CBSE',
+    period: {
+      start: 'June, 2018',
+      end: 'July, 2020'
+    },
+    paragraphs: ['JEE Mains - 98.92%ile ', 'Board (MPC) - 95%']
   }
 ]
 
 export const SUMMARY = [
-  `Experienced frontend developer with a strong background in modern web technologies, particularly within the React.js ecosystem. Skilled in UI development, accessibility, user experience, and performance optimization, with a focus on creating scalable, optimized, and user-friendly applications.`,
-  `Adept at working in agile environments and collaborating with teams to drive process efficiencies and deliver high-quality results. Committed to delivering exceptional user experiences and maximizing the impact of web applications.`,
-  `Continuously seeking to learn and explore new technologies and best practices, while also staying focused on meeting responsibilities and delivering results.`
+  `I'm passionate about using Artificial Intelligence to solve Complex Real-World Problems . By leveraging the latest advancements in Deep Learning, I strive to create innovative solutions that have a positive impact on society. I invite you to have a glimpse of my journey as an AI Enthusiast and my expertise in various domains.`,
+  `I have worked in fields like Computer Vision, Natural Language Processing, Generative Models, Modelling Tabular & Time Series Data . I have worked on diverse projects that have helped me hone my skills and gain a deeper understanding of the field.`
 ]
 
 export const LANGUAGES = [
@@ -97,6 +117,6 @@ export const LANGUAGES = [
   },
   {
     title: 'English',
-    level: 'Limited working proficiency'
+    level: 'Working proficiency'
   }
 ]
