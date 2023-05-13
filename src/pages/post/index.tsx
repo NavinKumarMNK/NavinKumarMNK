@@ -76,7 +76,7 @@ const PostPage: NextPage<PostPageProps> = ({ allPosts }) => {
             <PostList
               description="I've found some possible results for your search."
               posts={search.filteredPost}
-              title='Search Post'
+              title=''
             />
           ) : (
             <EmptyResult />
