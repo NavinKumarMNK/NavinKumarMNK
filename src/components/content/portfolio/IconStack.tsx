@@ -25,7 +25,16 @@ import {
   SiNumpy,
   SiPandas,
   SiScikitlearn,
-  SiRay
+  SiRay,
+  SiWindicss,
+  SiAmazonaws,
+  SiDocker,
+  SiNvidia,
+  SiMicrosoftazure,
+  SiDatabricks,
+  SiTauri,
+  SiYolo,
+  SiLinux,
 } from 'react-icons/si'
 
 type IconStackProps = {
@@ -113,7 +122,26 @@ export const IconStack: React.FunctionComponent<IconStackProps> = ({ type, class
 
     case 'scikit-learn':
       return <SiScikitlearn className={twclsx('text-red-500', className)} />
-
+    case 'windicss':
+      return <SiWindicss className={twclsx('text-cyan-500', className)} />
+    case 'aws':
+    case 'amazon web services':
+      return <SiAmazonaws className={twclsx('text-yellow-500', className)} />
+    case  'docker':
+      return <SiDocker className={twclsx('text-blue-500', className)} />
+    case 'nvidia':
+      return <SiNvidia className={twclsx('text-green-500', className)} />
+    case 'azure':
+    case 'microsoft azure':
+      return <SiMicrosoftazure className={twclsx('text-blue-500', className)} />
+    case 'databricks':
+      return <SiDatabricks className={twclsx('text-blue-500', className)} />
+    case 'tauri':
+      return <SiTauri className={twclsx('text-blue-500', className)} />
+    case 'yolo':
+      return <SiYolo className={twclsx('text-red-500', className)} />
+    case 'linux':
+      return <SiLinux className={twclsx('text-yellow-500', className)} />
     default:
       return <SiCodesandbox className={twclsx('text-slate-900 dark:text-slate-800', className)} />
   }

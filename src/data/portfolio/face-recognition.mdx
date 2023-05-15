@@ -1,21 +1,11 @@
 ---
-title: 'DeepSee Surveillance AI'
+title: 'Face Surveillance System'
 date: '04/01/2023'
 featured: true
-summary: 'Real Time Detection of Anomalous Activity From Videos (mainly crime actvity). Images of the video is trained using AutoEncoder to get the imtermediate feature representation of image & appliend svm model for the bag of such features to detect the anomaly & LSTM to detect the type of Anomaly.'
-image: 'https://ik.imagekit.io/mnk/projects/3-Figure2-1.png?updatedAt=1683552409101'
-stack: ['Pytorch', 'ray', 'pytorch lightning', 'python']
-link: { github: 'https://github.com/NavinKumarMNK/Anomaly-Crime-Activity-Detection', live: '' }
+summary: 'Face Recognition from Crowd by using yolov7 .Extracting the faces from a video/image/live source, which is then passed to the custom facenet network in order to recognize the peoples '
+image: 'https://ik.imagekit.io/mnk/projects/meeting.jpg?updatedAt=1684169818341'
+stack: ['Pytorch', 'ray', 'pytorch lightning', 'nvidia', 'yolo', 'docker']
+link: { github: 'https://github.com/NavinKumarMNK/Face-Recognition-From-Crowd', live: ''}
 ---
 
-Our proposed method consists of four main components:
-
-1. **Encoders**: We use CoAtNet, EfficientNetv2, and SwimTransformer as encoders to extract features from the input video frames. By using multiple encoders, we can ensure that a diverse set of features is extracted from the input frames, leading to better anomaly detection performance.
-
-2. **Decoder**: We use a custom decoder to reconstruct the input frames. The decoder is designed to have approximately 50 million parameters, which is relatively large compared to other decoders used in the literature. By using a larger decoder, we can ensure that more information is retained during the reconstruction process, which can lead to better anomaly detection performance.
-
-3. **Anomaly Detection**: We use a one-class SVM to detect anomalies in the reconstructed frames. The SVM takes 1024 embeddings as input data, which are extracted from the encoded video frames. One-class SVM is a popular method for anomaly detection because it does not require labeled data for training, making it suitable for unsupervised anomaly detection tasks.
-
-4. **Sequence Classification**: Finally, we use an LSTM to classify the video sequence as anomalous or non-anomalous. The LSTM takes the output of the one-class SVM as input and learns to classify the video sequence based on the presence of anomalies. LSTMs are well-suited for modeling sequential data, making them an ideal choice for video anomaly detection and classifying the type of anomaly.
-
-Our proposed method is a novel approach for anomaly detection in video data using a combination of deep learning techniques. The method can be used in various real-world applications, such as surveillance and security systems, where anomaly detection is of utmost importance.
+## Ongoing Project - Building v2
