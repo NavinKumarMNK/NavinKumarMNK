@@ -4,7 +4,7 @@ export const SkillsList: React.FunctionComponent = () => {
         <section className='py-8 md:py-16'>
   <h2 className='mb-3 text-center md:text-left'>Featured Skills 💪</h2>
   <p className='mb-8 text-center md:text-left '>Technologies, Frameworks & Languages I'm Expertise in</p>
-  <div className='flex space-y-3 sm:space-x-3 flex-col sm:flex-row '>
+  <div className='flex space-y-3 md:space-y-0 sm:space-x-3 flex-col sm:flex-row '>
   <div className='justify-center  md:justify-start bg-white dark:bg-gray-900 rounded-lg shadow-lg p-6'>
     <p className='text-center pb-3'><strong>Programming Languages</strong></p>
     <div className='flex flex-row flex-wrap space-x-3 space-y-3  justify-center items-center'>

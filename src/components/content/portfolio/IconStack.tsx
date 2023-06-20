@@ -34,7 +34,7 @@ import {
   SiDatabricks,
   SiTauri,
   SiYolo,
-  SiLinux,
+  SiLinux
 } from 'react-icons/si'
 
 type IconStackProps = {
