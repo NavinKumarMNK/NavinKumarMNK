@@ -1,5 +1,5 @@
 import { CustomSeo } from '@/components'
-import { PostList, ContentImage, PortfolioList, SkillsList } from '@/components/content'
+import { PostList, ContentImage, PortfolioList, SkillsList, ExperienceList } from '@/components/content'
 
 import { Footer, SocialHome } from '@/UI/common'
 
@@ -11,12 +11,15 @@ import { getNewestPost, getNewestPortfolio } from '@/libs/sorters'
 import type { GetStaticProps, NextPage } from 'next'
 import readingTime from 'reading-time'
 import type { Post, Portfolio } from 'megnav'
+
 import { useMediaQuery } from '@mui/material';
 
 interface HomePageProps {
   posts: Array<Post>
   portfolios: Array<Portfolio>
 }
+
+
 
 const HomePage: NextPage<HomePageProps> = ({ posts, portfolios }) => {
   const meta = getMetaPage({
@@ -44,10 +47,10 @@ const HomePage: NextPage<HomePageProps> = ({ posts, portfolios }) => {
   <div className='h-14 md:h-16'>
     <div className='absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
       <ContentImage
-        src='https://ik.imagekit.io/mnk/NavinKumarMNK.jpg?updatedAt=1683442016874'
+        src='https://ik.imagekit.io/mnk/my_image.jpg?updatedAt=1689170117022'
         alt='Navin Kumar M'
-        width={116}
-        height={116}
+        width={128}
+        height={128}
         className='rounded-full cursor-pointer border-theme-50 dark:border-theme-900'
         title="Navin Kumar M's Profile Picture"
         quality={100}
@@ -59,10 +62,10 @@ const HomePage: NextPage<HomePageProps> = ({ posts, portfolios }) => {
 ) : (
   <div className='relative flex h-14 md:h-16'>
     <ContentImage
-      src='https://ik.imagekit.io/mnk/NavinKumarMNK.jpg?updatedAt=1683442016874'
+      src='https://ik.imagekit.io/mnk/my_image.jpg?updatedAt=1689170117022'
       alt='Navin Kumar M'
-      width={128}
-      height={128}
+      width={140}
+      height={140}
       className='rounded-full absolute left-5 bottom-0.5 cursor-pointer border-theme-50 dark:border-theme-900'
       title="Navin Kumar M's Profile Picture"
       quality={100}
@@ -104,6 +107,8 @@ const HomePage: NextPage<HomePageProps> = ({ posts, portfolios }) => {
 
           </div>
         </section>
+
+        <ExperienceList />
 
         <SkillsList />
 

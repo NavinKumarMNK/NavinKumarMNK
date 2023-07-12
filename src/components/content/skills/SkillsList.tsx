@@ -1,7 +1,7 @@
 export const SkillsList: React.FunctionComponent = () => {
     
     return (
-        <section className='py-8 md:py-16'>
+        <section className='py-8 md:py-8'>
   <h2 className='mb-3 text-center md:text-left'>Featured Skills 💪</h2>
   <p className='mb-8 text-center md:text-left '>Technologies, Frameworks & Languages I'm Expertise in</p>
   <div className='flex space-y-3 md:space-y-0 sm:space-x-3 flex-col sm:flex-row '>

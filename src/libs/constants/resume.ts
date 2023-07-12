@@ -28,11 +28,11 @@ export const SKILLS = [
 
 export const EXPERIENCE: Experience[] = [
   {
-    companyName: 'Omega Plus Technologies, CA',
-    role: 'Deep Learning Engineer Remote Intern',
+    companyName: 'Gutsy Innovations, Bangalore',
+    role: 'Machine Learning Engineer',
     period: {
-      start: 'Dec 2022',
-      end: 'Feb 2023' 
+      start: 'May 2022',
+      end: 'July 2023' 
     },
     lists: [
       `Built a Real-time Face Detection and Recognition System for crowd surveillance using yolov7, Kalman
@@ -65,6 +65,13 @@ export const PROJECTS: Projects[] = [
     ]
   },
   {
+    projectName: 'Chart Derendering - Visual Reasoning',
+    lists: [
+      'Visual Reasoning from charts and plots to make them accessible for Visually Impaired People',
+      'Developed EfficientNetv2, Matcha (Pix2Struct) Multi Modal Transformer, and Faster RCNN for comprehensive Chart Derendering.'
+    ]
+  },
+  {
     projectName: 'Parallel & Distributed System Workspace',
     lists: [
       `No Code Lab Setup and Model Training Environment Documented for reproducibility.`,
@@ -73,6 +80,8 @@ export const PROJECTS: Projects[] = [
       in a Ray cluster.`
     ]
   }
+
+
 ]
 
 type Education = Array<{
@@ -92,7 +101,7 @@ export const EDUCATION: Education = [
       start: 'Sept, 2020',
       end: 'May, 2024'
     },
-    paragraphs: ['Vellore Insitute of Technology, Chennai', 'Cum.GPA : 8.8',
+    paragraphs: ['Vellore Insitute of Technology, Chennai', 'Cum.GPA : 8.86',
     'Relavant Coursework : ', 'Machine Learning, Deep Learning, Data Structures & Algorithms, Operating System, Business Intelligence, Malware & Security Intelligence, Computer Networks, Database Management, Applied Linear Algebra, Statistics, Engineering Calculus & Software Engineering']  
   },
   {
@@ -117,6 +126,6 @@ export const LANGUAGES = [
   },
   {
     title: 'English',
-    level: 'Working proficiency'
+    level: 'Moderate Working Proficiency'
   }
 ]

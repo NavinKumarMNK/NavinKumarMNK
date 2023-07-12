@@ -23,8 +23,6 @@ export const Footer: React.FunctionComponent = () => {
         
         <div className='flex flex-col space-y-3 space-y-0 space-x-3 justify-between'>
         <div className='mt-5 absolute h-14 left-1/2 transform -translate-x-1/2 -translate-y-1/2 items-center text-center'>
-        <SocialHome />
-      </div>
         <div className='flex pt-8 flex-col space-y-3 text-center items-center'>
           {APP_ROUTE.map((route) => (
             <UnstyledLink
@@ -36,7 +34,13 @@ export const Footer: React.FunctionComponent = () => {
             </UnstyledLink>
           ))}
         </div>
-        
+        <div className='mt-4'>
+        <p className='center text-sm text-gray-500 dark:text-gray-400'>
+          &copy; 2023 Navin Kumar M. All rights reserved.
+        </p>
+            &nbsp;
+        </div>
+      </div>
       </div>
       ):(
         <div className=' flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-3 md:justify-between'>
@@ -52,10 +56,12 @@ export const Footer: React.FunctionComponent = () => {
           ))}
         </div>
         <div className='mt-4'>
-        <SocialHome />
+        <p className='text-sm text-gray-500 dark:text-gray-400'>
+          &copy; 2023 Navin Kumar M. All rights reserved.
+        </p>
       </div>
       </div>
-
+      
       )}
     </footer>
   )
