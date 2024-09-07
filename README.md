@@ -22,10 +22,7 @@ You can click the Preview link to take a look at your changes.
 <h3 align="left">Connect with me:</h3>
 
 <a href="https://linkedin.com/in/mnk-navin" target="blank"><img align="center" src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white" alt="mnk-navin" height="25" width="100" /></a>
-
-<a href="https://buymeacoffee.com/https://buymeacoffee.com/navinkumarmnk" target="blank"><img align="center" src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="mnk-navin" height="26" width="150" /></a>
-
-
+<a href="https://buymeacoffee.com/navinkumarmnk" target="blank"><img align="center" src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="mnk-navin" height="25" width="120" /></a>
 
 ## Skill Set :muscle:
 
